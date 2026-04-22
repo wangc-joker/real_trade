@@ -5,6 +5,7 @@ $repoRoot = Split-Path -Parent $PSScriptRoot
 $templateConfigPath = Join-Path $repoRoot "user_data\config.live.nfi.dynamic.top40.302u.max2.json"
 $runtimeConfigPath = Join-Path $repoRoot "user_data\config.live.nfi.dynamic.top40.302u.max2.runtime.json"
 $pairsPath = Join-Path $repoRoot "user_data\generated\pairs.dynamic.top40.302u.balanced.json"
+$preservedPairsPath = Join-Path $repoRoot "user_data\runtime\preserved_open_pairs.json"
 $updateScriptPath = Join-Path $repoRoot "scripts\update_nfi_dynamic_top40_302u_balanced.ps1"
 $secureConfigPath = "D:\work\secure\secret_bin.json"
 $containerService = "freqtrade"
@@ -41,6 +42,31 @@ function Get-RequiredValue {
     throw "Missing required $Label. Set it in $secureConfigPath or environment variable $EnvName."
 }
 
+function Merge-PreservedPairs {
+    param(
+        [object[]]$PrimaryPairs,
+        [string]$PreservedPairsPath
+    )
+
+    $merged = New-Object System.Collections.Generic.List[string]
+    foreach ($pair in @($PrimaryPairs)) {
+        if (-not [string]::IsNullOrWhiteSpace($pair) -and -not $merged.Contains($pair)) {
+            $merged.Add($pair)
+        }
+    }
+
+    if (Test-Path -LiteralPath $PreservedPairsPath -PathType Leaf) {
+        $preservedPairs = Get-Content -Raw -LiteralPath $PreservedPairsPath | ConvertFrom-Json
+        foreach ($pair in @($preservedPairs)) {
+            if (-not [string]::IsNullOrWhiteSpace($pair) -and -not $merged.Contains($pair)) {
+                $merged.Add($pair)
+            }
+        }
+    }
+
+    return @($merged)
+}
+
 if (-not (Test-Path -LiteralPath $templateConfigPath -PathType Leaf)) {
     throw "Template config not found: $templateConfigPath"
 }
@@ -49,15 +75,22 @@ if (-not (Test-Path -LiteralPath $updateScriptPath -PathType Leaf)) {
     throw "Update script not found: $updateScriptPath"
 }
 
-Write-Host "Refreshing balanced dynamic top40 pairlist..." -ForegroundColor Cyan
-& powershell -ExecutionPolicy Bypass -File $updateScriptPath
+if (-not (Test-Path -LiteralPath $pairsPath -PathType Leaf)) {
+    Write-Host "Balanced dynamic top40 pairlist not found locally. Refreshing..." -ForegroundColor Cyan
+    & powershell -ExecutionPolicy Bypass -File $updateScriptPath
+}
+else {
+    Write-Host "Using existing balanced dynamic top40 pairlist file." -ForegroundColor Cyan
+    Write-Host ("Pairs  : {0}" -f $pairsPath)
+}
 
 if (-not (Test-Path -LiteralPath $pairsPath -PathType Leaf)) {
-    throw "Dynamic pair file not found after refresh: $pairsPath"
+    throw "Dynamic pair file not found: $pairsPath"
 }
 
 $templateConfig = Get-Content -Raw -LiteralPath $templateConfigPath | ConvertFrom-Json
 $pairs = Get-Content -Raw -LiteralPath $pairsPath | ConvertFrom-Json
+$pairs = Merge-PreservedPairs -PrimaryPairs @($pairs) -PreservedPairsPath $preservedPairsPath
 $secureConfig = Get-OptionalSecureConfig
 
 $apiKey = $secureConfig.exchange.key

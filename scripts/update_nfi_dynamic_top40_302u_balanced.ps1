@@ -5,8 +5,8 @@ $repoRoot = Split-Path -Parent $PSScriptRoot
 $pairsPath = Join-Path $repoRoot "user_data\generated\pairs.dynamic.top40.302u.balanced.json"
 $reportPath = Join-Path $repoRoot "user_data\generated\pairs.dynamic.top40.302u.balanced.report.json"
 
-$targetCount = 40
-$coreTargetCount = 28
+$targetCount = 30
+$coreTargetCount = 21
 $satelliteTargetCount = $targetCount - $coreTargetCount
 $quoteAsset = "USDT"
 $excludedSuffixes = @("BULL", "BEAR", "UP", "DOWN")

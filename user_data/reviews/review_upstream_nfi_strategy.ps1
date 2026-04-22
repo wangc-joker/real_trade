@@ -1,8 +1,8 @@
 ﻿[CmdletBinding()]
 param(
-    [string]$UpstreamRepoRoot = "D:\test\NostalgiaForInfinity",
+    [string]$UpstreamRepoRoot = "D:\work\NostalgiaForInfinity",
     [string]$Timerange,
-    [string]$DataDir = "D:\test\ft_userdata\user_data\data\binance",
+    [string]$DataDir = "D:\work\ft_userdata\user_data\data\binance",
     [switch]$SkipPull
 )
 

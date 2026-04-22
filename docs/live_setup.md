@@ -14,13 +14,25 @@
 
 ## 关键文件
 
-- 实盘配置模板：[config.live.nfi.dynamic.top40.302u.max2.json](/D:/test/real_trade/user_data/config.live.nfi.dynamic.top40.302u.max2.json)
-- 策略文件：[NostalgiaForInfinityX7.py](/D:/test/real_trade/user_data/strategies/NostalgiaForInfinityX7.py)
-- 默认动态币池更新脚本：[update_nfi_dynamic_top40_302u_balanced.ps1](/D:/test/real_trade/scripts/update_nfi_dynamic_top40_302u_balanced.ps1)
-- 稳健版动态币池更新脚本：[update_nfi_dynamic_top40_302u.ps1](/D:/test/real_trade/scripts/update_nfi_dynamic_top40_302u.ps1)
-- 启动脚本：[start_nfi_dynamic_top40_302u_max2_live.ps1](/D:/test/real_trade/scripts/start_nfi_dynamic_top40_302u_max2_live.ps1)
-- 状态查看脚本：[show_nfi_dynamic_top40_302u_max2_live_status.ps1](/D:/test/real_trade/scripts/show_nfi_dynamic_top40_302u_max2_live_status.ps1)
-- 自动恢复脚本：[auto_recover_nfi_dynamic_top40_302u_max2_live.ps1](/D:/test/real_trade/scripts/auto_recover_nfi_dynamic_top40_302u_max2_live.ps1)
+- 实盘配置模板：[config.live.nfi.dynamic.top40.302u.max2.json](/D:/work/real_trade/user_data/config.live.nfi.dynamic.top40.302u.max2.json)
+- 策略文件：[NostalgiaForInfinityX7.py](/D:/work/real_trade/user_data/strategies/NostalgiaForInfinityX7.py)
+- 当前动态币池更新入口：[update_nfi_dynamic_coin_40.cmd](/D:/work/real_trade/scripts/update_nfi_dynamic_coin_40.cmd)
+- 当前动态币池调度脚本：[update_nfi_dynamic_coin_40.ps1](/D:/work/real_trade/scripts/update_nfi_dynamic_coin_40.ps1)
+- 当前默认币池生成脚本：[update_nfi_dynamic_top40_302u_balanced.ps1](/D:/work/real_trade/scripts/update_nfi_dynamic_top40_302u_balanced.ps1)
+- 备用/历史币池脚本：[update_nfi_dynamic_top40_302u.ps1](/D:/work/real_trade/scripts/update_nfi_dynamic_top40_302u.ps1)
+- 启动脚本：[start_nfi_dynamic_top40_302u_max2_live.ps1](/D:/work/real_trade/scripts/start_nfi_dynamic_top40_302u_max2_live.ps1)
+- 状态查看脚本：[show_nfi_dynamic_top40_302u_max2_live_status.ps1](/D:/work/real_trade/scripts/show_nfi_dynamic_top40_302u_max2_live_status.ps1)
+- 自动恢复脚本：[auto_recover_nfi_dynamic_top40_302u_max2_live.ps1](/D:/work/real_trade/scripts/auto_recover_nfi_dynamic_top40_302u_max2_live.ps1)
+
+当前实盘实际使用的币池更新链路是：
+
+`update_nfi_dynamic_coin_40.cmd` -> `update_nfi_dynamic_coin_40.ps1` -> `update_nfi_dynamic_top40_302u_balanced.ps1`
+
+这条链路会：
+
+- 刷新本地平衡版 Top40 币池文件
+- 同步更新运行中的 `.runtime.json` whitelist
+- 如果 bot 正在运行，则调用 `reload_config` 让运行中服务直接加载新币池
 
 ## 密钥与敏感配置
 
@@ -56,7 +68,7 @@
 
 ## 动态 Top40 币池规则
 
-这一节描述的是“稳健版”规则，当前默认实盘不再使用它，保留它是为了后续对照和回切方便。
+这一节描述的是“稳健版”规则，当前默认实盘不再使用它，保留它仅用于对照、排查或后续回切。
 
 - 只保留 Binance Futures 的 `USDT` 永续合约
 - 合约状态必须是 `TRADING`
@@ -74,12 +86,12 @@
 
 生成文件位置：
 
-- 币池列表：[pairs.dynamic.top40.302u.json](/D:/test/real_trade/user_data/generated/pairs.dynamic.top40.302u.json)
-- 生成报告：[pairs.dynamic.top40.302u.report.json](/D:/test/real_trade/user_data/generated/pairs.dynamic.top40.302u.report.json)
+- 币池列表：[pairs.dynamic.top40.302u.json](/D:/work/real_trade/user_data/generated/pairs.dynamic.top40.302u.json)
+- 生成报告：[pairs.dynamic.top40.302u.report.json](/D:/work/real_trade/user_data/generated/pairs.dynamic.top40.302u.report.json)
 
 ## 平衡版 Top40 币池规则
 
-这套规则是给“收益和稳健性之间取中间值”准备的，也是当前 `D:\test\real_trade` 默认实盘所使用的规则。
+这套规则是给“收益和稳健性之间取中间值”准备的，也是当前 `D:\work\real_trade` 默认实盘所使用的规则。
 
 思路是：
 
@@ -112,8 +124,8 @@
 
 生成文件位置：
 
-- 平衡版币池列表：[pairs.dynamic.top40.302u.balanced.json](/D:/test/real_trade/user_data/generated/pairs.dynamic.top40.302u.balanced.json)
-- 平衡版生成报告：[pairs.dynamic.top40.302u.balanced.report.json](/D:/test/real_trade/user_data/generated/pairs.dynamic.top40.302u.balanced.report.json)
+- 平衡版币池列表：[pairs.dynamic.top40.302u.balanced.json](/D:/work/real_trade/user_data/generated/pairs.dynamic.top40.302u.balanced.json)
+- 平衡版生成报告：[pairs.dynamic.top40.302u.balanced.report.json](/D:/work/real_trade/user_data/generated/pairs.dynamic.top40.302u.balanced.report.json)
 
 ## 日常操作
 
@@ -121,21 +133,34 @@
 
 运行：
 
-`[start_nfi_dynamic_top40_302u_max2_live.cmd](/D:/test/real_trade/scripts/start_nfi_dynamic_top40_302u_max2_live.cmd)`
+`[start_nfi_dynamic_top40_302u_max2_live.cmd](/D:/work/real_trade/scripts/start_nfi_dynamic_top40_302u_max2_live.cmd)`
 
 执行内容：
 
-- 先刷新平衡版动态 Top40 币池
+- 优先读取本地已有的平衡版动态 Top40 币池文件
+- 只有在本地币池文件不存在时，才自动刷新一次
 - 把密钥注入 runtime 配置
 - 启动 Docker Compose
 - 等待 API 可用
 - 发送 bot 启动命令
 
+### 1.1 更新币池
+
+运行：
+
+`[update_nfi_dynamic_coin_40.cmd](/D:/work/real_trade/scripts/update_nfi_dynamic_coin_40.cmd)`
+
+执行内容：
+
+- 刷新本地平衡版 Top40 币池文件
+- 把新 whitelist 写回当前 `.runtime.json`
+- 如果 bot 正在运行，则调用 `reload_config`
+
 ### 2. 查看状态
 
 运行：
 
-`[show_nfi_dynamic_top40_302u_max2_live_status.cmd](/D:/test/real_trade/scripts/show_nfi_dynamic_top40_302u_max2_live_status.cmd)`
+`[show_nfi_dynamic_top40_302u_max2_live_status.cmd](/D:/work/real_trade/scripts/show_nfi_dynamic_top40_302u_max2_live_status.cmd)`
 
 会显示：
 
@@ -150,7 +175,7 @@
 
 运行：
 
-`[auto_recover_nfi_dynamic_top40_302u_max2_live.cmd](/D:/test/real_trade/scripts/auto_recover_nfi_dynamic_top40_302u_max2_live.cmd)`
+`[auto_recover_nfi_dynamic_top40_302u_max2_live.cmd](/D:/work/real_trade/scripts/auto_recover_nfi_dynamic_top40_302u_max2_live.cmd)`
 
 执行内容：
 
@@ -161,9 +186,9 @@
 
 ### 4. 迁移旧仓位
 
-如果你想把旧目录 `D:\test\ft_userdata` 里的实盘仓位，迁移到这个新目录继续管理，可以先看这份说明：
+如果你想把旧目录 `D:\work\ft_userdata` 里的实盘仓位，迁移到这个新目录继续管理，可以先看这份说明：
 
-- [旧实盘仓位迁移到新目录的安全步骤](/D:/test/real_trade/docs/live_migration_guide.md)
+- [旧实盘仓位迁移到新目录的安全步骤](/D:/work/real_trade/docs/live_migration_guide.md)
 
 这份文档会讲清楚：
 

@@ -11,15 +11,15 @@
 ## 当前参与评审的策略
 
 - 当前实盘版本：
-  [NostalgiaForInfinityX7.py](/D:/test/real_trade/user_data/strategies/NostalgiaForInfinityX7.py)
+[NostalgiaForInfinityX7.py](/D:/work/real_trade/user_data/strategies/NostalgiaForInfinityX7.py)
 - 上游仓库：
-  `D:\test\NostalgiaForInfinity`
+`D:\work\NostalgiaForInfinity`
 
 ## 评审用回测配置
 
 评审不是直接用实盘动态币池，而是用固定的静态对比配置：
 
-- [config.backtest.review.nfi.top40.302u.max2.json](/D:/test/real_trade/user_data/config.backtest.review.nfi.top40.302u.max2.json)
+- [config.backtest.review.nfi.top40.302u.max2.json](/D:/work/real_trade/user_data/config.backtest.review.nfi.top40.302u.max2.json)
 
 这样做的原因是：
 
@@ -38,11 +38,11 @@
 
 运行：
 
-`[review_upstream_nfi_strategy.cmd](/D:/test/real_trade/scripts/review_upstream_nfi_strategy.cmd)`
+`[review_upstream_nfi_strategy.cmd](/D:/work/real_trade/scripts/review_upstream_nfi_strategy.cmd)`
 
 默认行为：
 
-- 先到 `D:\test\NostalgiaForInfinity` 执行 `git pull --ff-only`
+- 先到 `D:\work\NostalgiaForInfinity` 执行 `git pull --ff-only`
 - 读取上游最新的 `NostalgiaForInfinityX7.py`
 - 和当前实盘版本做 diff
 - 用相同配置、相同时间区间，分别跑当前版和候选版回测
@@ -60,13 +60,13 @@
 如果你要手动指定时间区间，也可以运行：
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File D:\test\real_trade\scripts\review_upstream_nfi_strategy.ps1 -Timerange 20251001-20260401
+powershell -NoProfile -ExecutionPolicy Bypass -File D:\work\real_trade\scripts\review_upstream_nfi_strategy.ps1 -Timerange 20251001-20260401
 ```
 
 如果你不想在这次 review 里拉上游最新代码，可以加：
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File D:\test\real_trade\scripts\review_upstream_nfi_strategy.ps1 -SkipPull
+powershell -NoProfile -ExecutionPolicy Bypass -File D:\work\real_trade\scripts\review_upstream_nfi_strategy.ps1 -SkipPull
 ```
 
 ## 每次评审会生成什么

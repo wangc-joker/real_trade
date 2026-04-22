@@ -1,6 +1,6 @@
 # 旧实盘仓位迁移到新目录的安全步骤
 
-这份说明用于把你现在在 `D:\test\ft_userdata` 里跑的原版实盘，安全迁移到 `D:\test\real_trade` 里的新策略实盘，同时尽量继续接管原来的持仓。
+这份说明用于把你现在在 `D:\work\ft_userdata` 里跑的原版实盘，安全迁移到 `D:\work\real_trade` 里的新策略实盘，同时尽量继续接管原来的持仓。
 
 ## 先说结论
 
@@ -62,7 +62,7 @@
 
 旧目录参考：
 
-- [D:\test\ft_userdata](/D:/test/ft_userdata)
+- [D:\work\ft_userdata](/D:/work/ft_userdata)
 
 ### 第 2 步：正常停掉旧 bot
 
@@ -87,11 +87,11 @@
 
 把旧 bot 当前使用的数据库，复制到新目录：
 
-- [D:\test\real_trade\user_data](/D:/test/real_trade/user_data)
+- [D:\work\real_trade\user_data](/D:/work/real_trade/user_data)
 
 新目录里的 live 启动脚本当前默认会使用类似这种数据库名：
 
-- [start_nfi_dynamic_top40_302u_max2_live.ps1](/D:/test/real_trade/scripts/start_nfi_dynamic_top40_302u_max2_live.ps1)
+- [start_nfi_dynamic_top40_302u_max2_live.ps1](/D:/work/real_trade/scripts/start_nfi_dynamic_top40_302u_max2_live.ps1)
 
 对应数据库路径是：
 
@@ -122,7 +122,7 @@
 
 建议先用状态查看脚本确认：
 
-- [show_nfi_dynamic_top40_302u_max2_live_status.ps1](/D:/test/real_trade/scripts/show_nfi_dynamic_top40_302u_max2_live_status.ps1)
+- [show_nfi_dynamic_top40_302u_max2_live_status.ps1](/D:/work/real_trade/scripts/show_nfi_dynamic_top40_302u_max2_live_status.ps1)
 
 ### 第 7 步：前 10 到 20 分钟重点观察
 
@@ -152,7 +152,7 @@
 
 1. 停旧 bot
 2. 备份旧数据库
-3. 复制旧数据库到 `D:\test\real_trade\user_data`
+3. 复制旧数据库到 `D:\work\real_trade\user_data`
 4. 用新目录启动新策略
 5. 检查状态脚本
 6. 确认旧仓位正常接管
@@ -160,8 +160,8 @@
 
 ## 相关文件
 
-- 新实盘目录：[D:\test\real_trade](/D:/test/real_trade)
-- 旧实盘目录：[D:\test\ft_userdata](/D:/test/ft_userdata)
-- 新实盘启动脚本：[start_nfi_dynamic_top40_302u_max2_live.ps1](/D:/test/real_trade/scripts/start_nfi_dynamic_top40_302u_max2_live.ps1)
-- 新实盘状态脚本：[show_nfi_dynamic_top40_302u_max2_live_status.ps1](/D:/test/real_trade/scripts/show_nfi_dynamic_top40_302u_max2_live_status.ps1)
+- 新实盘目录：[D:\work\real_trade](/D:/work/real_trade)
+- 旧实盘目录：[D:\work\ft_userdata](/D:/work/ft_userdata)
+- 新实盘启动脚本：[start_nfi_dynamic_top40_302u_max2_live.ps1](/D:/work/real_trade/scripts/start_nfi_dynamic_top40_302u_max2_live.ps1)
+- 新实盘状态脚本：[show_nfi_dynamic_top40_302u_max2_live_status.ps1](/D:/work/real_trade/scripts/show_nfi_dynamic_top40_302u_max2_live_status.ps1)
 
