@@ -3,7 +3,7 @@ user_data/generated/*.runtime.json
 user_data/generated/*.local.json
 user_data/generated/*.tmp
 user_data/logs/*.log
-user_data/reviews/*
+#user_data/reviews/
 !user_data/reviews/.gitkeep
 user_data/runtime/*
 !user_data/runtime/.gitkeep

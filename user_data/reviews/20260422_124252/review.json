@@ -1,0 +1,55 @@
+{
+    "generated_at":  "2026-04-22 12:49:43 +08:00",
+    "timerange":  "20251020-20260420",
+    "upstream_repo":  "D:\\test\\NostalgiaForInfinity",
+    "review_root":  "D:\\test\\real_trade\\user_data\\reviews\\20260422_124252",
+    "upstream_commit_id":  "5ea2fe34a6b8db86ff5118595752c7f8ff7f9f4e",
+    "current_repo_commit_id":  null,
+    "current_strategy_sha256":  "F62F29A51A4100F1730FA40A8783183B2B092D00BAB5C48D49CFD4414D94F490",
+    "current":  {
+                    "strategy_name":  "NostalgiaForInfinityX7",
+                    "final_balance":  1001.92851507,
+                    "profit_total_abs":  699.32851507,
+                    "profit_total_pct":  231.10658131857232,
+                    "cagr":  1003.5514669276472,
+                    "max_relative_drawdown":  0,
+                    "max_drawdown_abs":  0,
+                    "total_trades":  72,
+                    "winrate":  100,
+                    "backtest_start":  "2025-10-20 00:00:00",
+                    "backtest_end":  "2026-04-20 00:00:00",
+                    "timerange":  "20251020-20260420",
+                    "zip_path":  "D:\\test\\real_trade\\user_data\\reviews\\20260422_124252\\backtests\\current\\backtest-result-2026-04-22_04-46-09.zip"
+                },
+    "candidate":  {
+                      "strategy_name":  "NostalgiaForInfinityX7",
+                      "final_balance":  2609.11090661,
+                      "profit_total_abs":  2306.51090661,
+                      "profit_total_pct":  762.23096715465954,
+                      "cagr":  7422.9473468600991,
+                      "max_relative_drawdown":  0,
+                      "max_drawdown_abs":  0,
+                      "total_trades":  71,
+                      "winrate":  100,
+                      "backtest_start":  "2025-10-20 00:00:00",
+                      "backtest_end":  "2026-04-20 00:00:00",
+                      "timerange":  "20251020-20260420",
+                      "zip_path":  "D:\\test\\real_trade\\user_data\\reviews\\20260422_124252\\backtests\\candidate\\backtest-result-2026-04-22_04-49-40.zip"
+                  },
+    "risk_signals":  [
+                         {
+                             "label":  "Stoploss logic changed",
+                             "level":  "high"
+                         },
+                         {
+                             "label":  "Stake sizing logic changed",
+                             "level":  "medium"
+                         },
+                         {
+                             "label":  "Protection logic changed",
+                             "level":  "medium"
+                         }
+                     ],
+    "recommendation":  "review_manually",
+    "recommendation_zh":  "需要人工复核后再决定是否更新"
+}

@@ -1,0 +1,742 @@
+ Container real_trade-freqtrade-run-4b6ef16f4d44 Creating 
+ Container real_trade-freqtrade-run-4b6ef16f4d44 Created 
+2026-04-22 04:28:00,444 - freqtrade - INFO - freqtrade 2026.3
+2026-04-22 04:28:00,669 - numexpr.utils - INFO - NumExpr defaulting to 16 threads.
+2026-04-22 04:28:01,643 - freqtrade.configuration.load_config - INFO - Using config: /freqtrade/user_data/config.backtest.review.nfi.top40.302u.max2.json ...
+2026-04-22 04:28:01,651 - freqtrade.loggers - INFO - Enabling colorized output.
+2026-04-22 04:28:01,651 - freqtrade.loggers - INFO - Logfile configured
+2026-04-22 04:28:01,651 - freqtrade.loggers - INFO - Verbosity set to 0
+2026-04-22 04:28:01,652 - freqtrade.configuration.configuration - INFO - Using additional Strategy lookup path: /freqtrade/user_data/reviews/20260422_122757/current
+2026-04-22 04:28:01,652 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 2 ...
+2026-04-22 04:28:01,652 - freqtrade.configuration.configuration - INFO - Parameter --timerange detected: 20251022-20260422 ...
+2026-04-22 04:28:02,532 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+2026-04-22 04:28:02,533 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/binance ...
+2026-04-22 04:28:02,534 - freqtrade.configuration.configuration - INFO - Using /freqtrade/user_data/reviews/20260422_122757/backtests/current as backtest directory ...
+2026-04-22 04:28:02,534 - freqtrade.configuration.configuration - INFO - Parameter --export detected: trades ...
+2026-04-22 04:28:02,534 - freqtrade.configuration.configuration - INFO - Parameter --cache=none detected ...
+2026-04-22 04:28:02,535 - freqtrade.configuration.configuration - INFO - Filter trades by timerange: 20251022-20260422
+2026-04-22 04:28:02,535 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2026-04-22 04:28:02,540 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2026-04-22 04:28:02,541 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2026-04-22 04:28:02,541 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-04-22 04:28:02,543 - freqtrade.commands.optimize_commands - INFO - Starting freqtrade in Backtesting mode
+2026-04-22 04:28:02,544 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-04-22 04:28:02,544 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.44
+2026-04-22 04:28:02,544 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'options': {'defaultType': 'swap'}}
+2026-04-22 04:28:02,550 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'options': {'defaultType': 'swap'}}
+2026-04-22 04:28:02,555 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
+2026-04-22 04:28:07,864 - freqtrade.exchange.common - WARNING - _load_async_markets() returned exception: "Error in reload_markets due to ExchangeNotAvailable. Message: binance GET 
+https://dapi.binance.com/dapi/v1/exchangeInfo". Retrying still for 3 times.
+2026-04-22 04:28:08,687 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange 'Binance'...
+2026-04-22 04:28:10,060 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy NostalgiaForInfinityX7 from '/freqtrade/user_data/reviews/20260422_122757/current/NostalgiaForInfinityX7.py'...
+2026-04-22 04:28:10,061 - freqtrade.strategy.hyper - INFO - Found no parameter file.
+2026-04-22 04:28:10,064 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
+2026-04-22 04:28:10,065 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: unlimited.
+2026-04-22 04:28:10,065 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 10, 'exit_timeout_count': 0, 
+'unit': 'minutes'}.
+2026-04-22 04:28:10,066 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 2.
+2026-04-22 04:28:10,066 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {}
+2026-04-22 04:28:10,066 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 5m
+2026-04-22 04:28:10,067 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.99
+2026-04-22 04:28:10,067 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+2026-04-22 04:28:10,067 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive: 0.01
+2026-04-22 04:28:10,068 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.03
+2026-04-22 04:28:10,068 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: True
+2026-04-22 04:28:10,068 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+2026-04-22 04:28:10,068 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+2026-04-22 04:28:10,068 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'limit', 'stoploss': 'limit', 'stoploss_on_exchange': False, 
+'stoploss_on_exchange_interval': 60}
+2026-04-22 04:28:10,069 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+2026-04-22 04:28:10,069 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+2026-04-22 04:28:10,069 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: unlimited
+2026-04-22 04:28:10,069 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 800
+2026-04-22 04:28:10,069 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'exit_timeout_count': 0, 'unit': 'minutes'}
+2026-04-22 04:28:10,070 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+2026-04-22 04:28:10,070 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+2026-04-22 04:28:10,070 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: True
+2026-04-22 04:28:10,070 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+2026-04-22 04:28:10,070 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+2026-04-22 04:28:10,070 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+2026-04-22 04:28:10,071 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: True
+2026-04-22 04:28:10,071 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+2026-04-22 04:28:10,071 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 2
+2026-04-22 04:28:10,071 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-04-22 04:28:10,074 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist StaticPairList from '/freqtrade/freqtrade/plugins/pairlist/StaticPairList.py'...
+2026-04-22 04:28:10,093 - freqtrade.optimize.backtesting - INFO - Using fee 0.0500% - worst case fee from exchange (lowest tier).
+2026-04-22 04:28:10,093 - freqtrade.exchange.exchange - WARNING - Using 2 calls to get OHLCV. This can result in slower operations for the bot. Please check if you really need 800 candles for your 
+strategy.
+2026-04-22 04:28:10,169 - freqtrade.data.history.datahandlers.idatahandler - WARNING - BTC/USDT:USDT, futures, 5m, data ends at 2026-04-20 01:40:00
+2026-04-22 04:28:10,239 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ETH/USDT:USDT, futures, 5m, data ends at 2026-04-20 01:40:00
+2026-04-22 04:28:10,307 - freqtrade.data.history.datahandlers.idatahandler - WARNING - SOL/USDT:USDT, futures, 5m, data ends at 2026-04-20 01:45:00
+2026-04-22 04:28:10,371 - freqtrade.data.history.datahandlers.idatahandler - WARNING - XRP/USDT:USDT, futures, 5m, data ends at 2026-04-20 01:45:00
+2026-04-22 04:28:10,486 - freqtrade.data.history.datahandlers.idatahandler - WARNING - DOGE/USDT:USDT, futures, 5m, data ends at 2026-04-20 01:40:00
+2026-04-22 04:28:10,546 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ZEC/USDT:USDT, futures, 5m, data ends at 2026-04-20 01:45:00
+2026-04-22 04:28:10,608 - freqtrade.data.history.datahandlers.idatahandler - WARNING - HIGH/USDT:USDT, futures, 5m, data ends at 2026-04-20 01:45:00
+2026-04-22 04:28:10,670 - freqtrade.data.history.datahandlers.idatahandler - WARNING - AAVE/USDT:USDT, futures, 5m, data ends at 2026-04-20 01:40:00
+2026-04-22 04:28:10,734 - freqtrade.data.history.datahandlers.idatahandler - WARNING - BNB/USDT:USDT, futures, 5m, data ends at 2026-04-20 01:40:00
+2026-04-22 04:28:10,797 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ENJ/USDT:USDT, futures, 5m, data ends at 2026-04-20 01:40:00
+2026-04-22 04:28:10,858 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ADA/USDT:USDT, futures, 5m, data ends at 2026-04-20 01:40:00
+2026-04-22 04:28:10,922 - freqtrade.data.history.datahandlers.idatahandler - WARNING - AVAX/USDT:USDT, futures, 5m, data ends at 2026-04-20 01:40:00
+2026-04-22 04:28:10,975 - freqtrade.data.history.datahandlers.idatahandler - WARNING - GTC/USDT:USDT, futures, 5m, data ends at 2026-04-20 01:40:00
+2026-04-22 04:28:11,055 - freqtrade.data.history.datahandlers.idatahandler - WARNING - PHB/USDT:USDT, futures, 5m, data ends at 2026-04-20 01:45:00
+2026-04-22 04:28:11,139 - freqtrade.data.history.datahandlers.idatahandler - WARNING - LINK/USDT:USDT, futures, 5m, data ends at 2026-04-20 01:45:00
+2026-04-22 04:28:11,213 - freqtrade.data.history.datahandlers.idatahandler - WARNING - TRX/USDT:USDT, futures, 5m, data ends at 2026-04-20 01:45:00
+2026-04-22 04:28:11,297 - freqtrade.data.history.datahandlers.idatahandler - WARNING - NEAR/USDT:USDT, futures, 5m, data ends at 2026-04-20 01:45:00
+2026-04-22 04:28:11,429 - freqtrade.data.history.datahandlers.idatahandler - WARNING - DOT/USDT:USDT, futures, 5m, data ends at 2026-04-20 01:40:00
+2026-04-22 04:28:11,506 - freqtrade.data.history.datahandlers.idatahandler - WARNING - FIL/USDT:USDT, futures, 5m, data ends at 2026-04-20 01:40:00
+2026-04-22 04:28:11,573 - freqtrade.data.history.datahandlers.idatahandler - WARNING - CRV/USDT:USDT, futures, 5m, data ends at 2026-04-20 02:40:00
+2026-04-22 04:28:11,656 - freqtrade.data.history.datahandlers.idatahandler - WARNING - 1000SHIB/USDT:USDT, futures, 5m, data ends at 2026-04-20 02:30:00
+2026-04-22 04:28:11,741 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ARB/USDT:USDT, futures, 5m, data ends at 2026-04-20 02:35:00
+2026-04-22 04:28:11,885 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ALICE/USDT:USDT, futures, 5m, data ends at 2026-04-20 02:35:00
+2026-04-22 04:28:11,951 - freqtrade.data.history.datahandlers.idatahandler - WARNING - FET/USDT:USDT, futures, 5m, data ends at 2026-04-20 02:40:00
+2026-04-22 04:28:12,017 - freqtrade.data.history.datahandlers.idatahandler - WARNING - XLM/USDT:USDT, futures, 5m, data ends at 2026-04-20 02:50:00
+2026-04-22 04:28:12,085 - freqtrade.data.history.datahandlers.idatahandler - WARNING - DASH/USDT:USDT, futures, 5m, data ends at 2026-04-20 02:40:00
+2026-04-22 04:28:12,174 - freqtrade.data.history.datahandlers.idatahandler - WARNING - API3/USDT:USDT, futures, 5m, data ends at 2026-04-20 02:35:00
+2026-04-22 04:28:12,260 - freqtrade.data.history.datahandlers.idatahandler - WARNING - APT/USDT:USDT, futures, 5m, data ends at 2026-04-20 02:35:00
+2026-04-22 04:28:12,355 - freqtrade.data.history.datahandlers.idatahandler - WARNING - XMR/USDT:USDT, futures, 5m, data ends at 2026-04-20 02:50:00
+2026-04-22 04:28:12,457 - freqtrade.data.history.datahandlers.idatahandler - WARNING - DYDX/USDT:USDT, futures, 5m, data ends at 2026-04-20 02:40:00
+2026-04-22 04:28:12,595 - freqtrade.data.history.datahandlers.idatahandler - WARNING - GALA/USDT:USDT, futures, 5m, data ends at 2026-04-20 02:40:00
+2026-04-22 04:28:12,716 - freqtrade.data.history.datahandlers.idatahandler - WARNING - HBAR/USDT:USDT, futures, 5m, data ends at 2026-04-20 02:40:00
+2026-04-22 04:28:12,809 - freqtrade.data.history.datahandlers.idatahandler - WARNING - OP/USDT:USDT, futures, 5m, data ends at 2026-04-20 02:45:00
+2026-04-22 04:28:12,900 - freqtrade.data.history.datahandlers.idatahandler - WARNING - CHZ/USDT:USDT, futures, 5m, data ends at 2026-04-20 02:35:00
+2026-04-22 04:28:12,965 - freqtrade.data.history.datahandlers.idatahandler - WARNING - LDO/USDT:USDT, futures, 5m, data ends at 2026-04-20 02:45:00
+2026-04-22 04:28:13,022 - freqtrade.data.history.datahandlers.idatahandler - WARNING - TRB/USDT:USDT, futures, 5m, data ends at 2026-04-20 02:45:00
+2026-04-22 04:28:13,074 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ICP/USDT:USDT, futures, 5m, data ends at 2026-04-20 02:40:00
+2026-04-22 04:28:13,148 - freqtrade.data.history.datahandlers.idatahandler - WARNING - AR/USDT:USDT, futures, 5m, data ends at 2026-04-20 02:35:00
+2026-04-22 04:28:13,209 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ZEN/USDT:USDT, futures, 5m, data ends at 2026-04-20 02:50:00
+2026-04-22 04:28:13,275 - freqtrade.data.history.datahandlers.idatahandler - WARNING - INJ/USDT:USDT, futures, 5m, data ends at 2026-04-20 02:40:00
+2026-04-22 04:28:13,297 - freqtrade.optimize.backtesting - INFO - Loading data from 2025-10-19 05:20:00 up to 2026-04-20 02:50:00 (182 days).
+2026-04-22 04:28:13,315 - freqtrade.data.history.datahandlers.idatahandler - WARNING - BTC/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 00:00:00
+2026-04-22 04:28:13,333 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ETH/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 00:00:00
+2026-04-22 04:28:13,350 - freqtrade.data.history.datahandlers.idatahandler - WARNING - SOL/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 00:00:00
+2026-04-22 04:28:13,367 - freqtrade.data.history.datahandlers.idatahandler - WARNING - XRP/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 00:00:00
+2026-04-22 04:28:13,385 - freqtrade.data.history.datahandlers.idatahandler - WARNING - DOGE/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 00:00:00
+2026-04-22 04:28:13,403 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ZEC/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 00:00:00
+2026-04-22 04:28:13,421 - freqtrade.data.history.datahandlers.idatahandler - WARNING - HIGH/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 00:00:00
+2026-04-22 04:28:13,441 - freqtrade.data.history.datahandlers.idatahandler - WARNING - AAVE/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 08:00:00
+2026-04-22 04:28:13,460 - freqtrade.data.history.datahandlers.idatahandler - WARNING - BNB/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 00:00:00
+2026-04-22 04:28:13,476 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ENJ/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 12:00:00
+2026-04-22 04:28:13,494 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ADA/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 00:00:00
+2026-04-22 04:28:13,512 - freqtrade.data.history.datahandlers.idatahandler - WARNING - AVAX/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 08:00:00
+2026-04-22 04:28:13,531 - freqtrade.data.history.datahandlers.idatahandler - WARNING - GTC/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 00:00:00
+2026-04-22 04:28:13,553 - freqtrade.data.history.datahandlers.idatahandler - WARNING - PHB/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 00:00:00
+2026-04-22 04:28:13,569 - freqtrade.data.history.datahandlers.idatahandler - WARNING - LINK/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 08:00:00
+2026-04-22 04:28:13,589 - freqtrade.data.history.datahandlers.idatahandler - WARNING - TRX/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 00:00:00
+2026-04-22 04:28:13,608 - freqtrade.data.history.datahandlers.idatahandler - WARNING - NEAR/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 08:00:00
+2026-04-22 04:28:13,643 - freqtrade.data.history.datahandlers.idatahandler - WARNING - DOT/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 08:00:00
+2026-04-22 04:28:13,666 - freqtrade.data.history.datahandlers.idatahandler - WARNING - FIL/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 08:00:00
+2026-04-22 04:28:13,686 - freqtrade.data.history.datahandlers.idatahandler - WARNING - CRV/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:13,704 - freqtrade.data.history.datahandlers.idatahandler - WARNING - 1000SHIB/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:13,721 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ARB/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:13,739 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ALICE/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 20:00:00
+2026-04-22 04:28:13,752 - freqtrade.data.history.datahandlers.idatahandler - WARNING - FET/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:13,764 - freqtrade.data.history.datahandlers.idatahandler - WARNING - XLM/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:13,775 - freqtrade.data.history.datahandlers.idatahandler - WARNING - DASH/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:13,789 - freqtrade.data.history.datahandlers.idatahandler - WARNING - API3/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 20:00:00
+2026-04-22 04:28:13,801 - freqtrade.data.history.datahandlers.idatahandler - WARNING - APT/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:13,813 - freqtrade.data.history.datahandlers.idatahandler - WARNING - XMR/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:13,826 - freqtrade.data.history.datahandlers.idatahandler - WARNING - DYDX/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:13,838 - freqtrade.data.history.datahandlers.idatahandler - WARNING - GALA/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:13,851 - freqtrade.data.history.datahandlers.idatahandler - WARNING - HBAR/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:13,863 - freqtrade.data.history.datahandlers.idatahandler - WARNING - OP/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:13,875 - freqtrade.data.history.datahandlers.idatahandler - WARNING - CHZ/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:13,886 - freqtrade.data.history.datahandlers.idatahandler - WARNING - LDO/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:13,899 - freqtrade.data.history.datahandlers.idatahandler - WARNING - TRB/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 20:00:00
+2026-04-22 04:28:13,910 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ICP/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:13,922 - freqtrade.data.history.datahandlers.idatahandler - WARNING - AR/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:13,934 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ZEN/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:13,945 - freqtrade.data.history.datahandlers.idatahandler - WARNING - INJ/USDT:USDT, funding_rate, 1h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:13,964 - freqtrade.data.history.datahandlers.idatahandler - WARNING - BTC/USDT:USDT, mark, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:13,986 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ETH/USDT:USDT, mark, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:14,008 - freqtrade.data.history.datahandlers.idatahandler - WARNING - SOL/USDT:USDT, mark, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:14,029 - freqtrade.data.history.datahandlers.idatahandler - WARNING - XRP/USDT:USDT, mark, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:14,051 - freqtrade.data.history.datahandlers.idatahandler - WARNING - DOGE/USDT:USDT, mark, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:14,075 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ZEC/USDT:USDT, mark, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:14,098 - freqtrade.data.history.datahandlers.idatahandler - WARNING - HIGH/USDT:USDT, mark, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:14,127 - freqtrade.data.history.datahandlers.idatahandler - WARNING - AAVE/USDT:USDT, mark, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:14,156 - freqtrade.data.history.datahandlers.idatahandler - WARNING - BNB/USDT:USDT, mark, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:14,181 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ENJ/USDT:USDT, mark, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:14,205 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ADA/USDT:USDT, mark, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:14,227 - freqtrade.data.history.datahandlers.idatahandler - WARNING - AVAX/USDT:USDT, mark, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:14,249 - freqtrade.data.history.datahandlers.idatahandler - WARNING - GTC/USDT:USDT, mark, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:14,270 - freqtrade.data.history.datahandlers.idatahandler - WARNING - PHB/USDT:USDT, mark, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:14,292 - freqtrade.data.history.datahandlers.idatahandler - WARNING - LINK/USDT:USDT, mark, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:14,315 - freqtrade.data.history.datahandlers.idatahandler - WARNING - TRX/USDT:USDT, mark, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:14,336 - freqtrade.data.history.datahandlers.idatahandler - WARNING - NEAR/USDT:USDT, mark, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:14,357 - freqtrade.data.history.datahandlers.idatahandler - WARNING - DOT/USDT:USDT, mark, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:14,378 - freqtrade.data.history.datahandlers.idatahandler - WARNING - FIL/USDT:USDT, mark, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:14,400 - freqtrade.data.history.datahandlers.idatahandler - WARNING - CRV/USDT:USDT, mark, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:14,422 - freqtrade.data.history.datahandlers.idatahandler - WARNING - 1000SHIB/USDT:USDT, mark, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:14,443 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ARB/USDT:USDT, mark, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:14,465 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ALICE/USDT:USDT, mark, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:14,487 - freqtrade.data.history.datahandlers.idatahandler - WARNING - FET/USDT:USDT, mark, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:14,509 - freqtrade.data.history.datahandlers.idatahandler - WARNING - XLM/USDT:USDT, mark, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:14,529 - freqtrade.data.history.datahandlers.idatahandler - WARNING - DASH/USDT:USDT, mark, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:14,549 - freqtrade.data.history.datahandlers.idatahandler - WARNING - API3/USDT:USDT, mark, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:14,570 - freqtrade.data.history.datahandlers.idatahandler - WARNING - APT/USDT:USDT, mark, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:14,590 - freqtrade.data.history.datahandlers.idatahandler - WARNING - XMR/USDT:USDT, mark, 1h, data ends at 2026-04-20 01:00:00
+2026-04-22 04:28:14,610 - freqtrade.data.history.datahandlers.idatahandler - WARNING - DYDX/USDT:USDT, mark, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:14,630 - freqtrade.data.history.datahandlers.idatahandler - WARNING - GALA/USDT:USDT, mark, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:14,649 - freqtrade.data.history.datahandlers.idatahandler - WARNING - HBAR/USDT:USDT, mark, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:14,763 - freqtrade.data.history.datahandlers.idatahandler - WARNING - OP/USDT:USDT, mark, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:14,788 - freqtrade.data.history.datahandlers.idatahandler - WARNING - CHZ/USDT:USDT, mark, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:14,814 - freqtrade.data.history.datahandlers.idatahandler - WARNING - LDO/USDT:USDT, mark, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:14,844 - freqtrade.data.history.datahandlers.idatahandler - WARNING - TRB/USDT:USDT, mark, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:14,873 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ICP/USDT:USDT, mark, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:14,899 - freqtrade.data.history.datahandlers.idatahandler - WARNING - AR/USDT:USDT, mark, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:14,929 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ZEN/USDT:USDT, mark, 1h, data ends at 2026-04-20 01:00:00
+2026-04-22 04:28:14,958 - freqtrade.data.history.datahandlers.idatahandler - WARNING - INJ/USDT:USDT, mark, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:25,869 - freqtrade.optimize.backtesting - INFO - Dataload complete. Calculating indicators
+2026-04-22 04:28:25,890 - freqtrade.optimize.backtesting - INFO - Running backtesting for Strategy NostalgiaForInfinityX7
+2026-04-22 04:28:25,893 - freqtrade.data.dataprovider - INFO - Loading data for BTC/USDT:USDT 5m from 2025-10-19 05:20:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:25,996 - freqtrade.data.history.datahandlers.idatahandler - WARNING - BTC/USDT:USDT, futures, 5m, data ends at 2026-04-20 01:40:00
+2026-04-22 04:28:26,015 - freqtrade.data.dataprovider - INFO - Loading data for BTC/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:26,053 - freqtrade.data.history.datahandlers.idatahandler - WARNING - BTC/USDT:USDT, futures, 15m, data ends at 2026-04-20 01:00:00
+2026-04-22 04:28:26,071 - freqtrade.data.dataprovider - INFO - Loading data for BTC/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:26,087 - freqtrade.data.history.datahandlers.idatahandler - WARNING - BTC/USDT:USDT, futures, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:26,101 - freqtrade.data.dataprovider - INFO - Loading data for BTC/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:26,114 - freqtrade.data.history.datahandlers.idatahandler - WARNING - BTC/USDT:USDT, futures, 4h, data ends at 2026-04-19 08:00:00
+2026-04-22 04:28:26,127 - freqtrade.data.dataprovider - INFO - Loading data for BTC/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:26,137 - freqtrade.data.history.datahandlers.idatahandler - WARNING - BTC/USDT:USDT, futures, 1d, data ends at 2026-04-16 00:00:00
+2026-04-22 04:28:26,847 - freqtrade.data.dataprovider - INFO - Loading data for ETH/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:26,875 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ETH/USDT:USDT, futures, 15m, data ends at 2026-04-20 01:00:00
+2026-04-22 04:28:26,911 - freqtrade.data.dataprovider - INFO - Loading data for ETH/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:26,927 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ETH/USDT:USDT, futures, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:26,982 - freqtrade.data.dataprovider - INFO - Loading data for ETH/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:26,995 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ETH/USDT:USDT, futures, 4h, data ends at 2026-04-19 08:00:00
+2026-04-22 04:28:27,065 - freqtrade.data.dataprovider - INFO - Loading data for ETH/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:27,075 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ETH/USDT:USDT, futures, 1d, data ends at 2026-04-16 00:00:00
+2026-04-22 04:28:27,619 - freqtrade.data.dataprovider - INFO - Loading data for SOL/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:27,681 - freqtrade.data.history.datahandlers.idatahandler - WARNING - SOL/USDT:USDT, futures, 15m, data ends at 2026-04-20 01:00:00
+2026-04-22 04:28:27,718 - freqtrade.data.dataprovider - INFO - Loading data for SOL/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:27,766 - freqtrade.data.history.datahandlers.idatahandler - WARNING - SOL/USDT:USDT, futures, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:27,814 - freqtrade.data.dataprovider - INFO - Loading data for SOL/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:27,837 - freqtrade.data.history.datahandlers.idatahandler - WARNING - SOL/USDT:USDT, futures, 4h, data ends at 2026-04-19 08:00:00
+2026-04-22 04:28:27,909 - freqtrade.data.dataprovider - INFO - Loading data for SOL/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:27,919 - freqtrade.data.history.datahandlers.idatahandler - WARNING - SOL/USDT:USDT, futures, 1d, data ends at 2026-04-16 00:00:00
+2026-04-22 04:28:28,457 - freqtrade.data.dataprovider - INFO - Loading data for XRP/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:28,495 - freqtrade.data.history.datahandlers.idatahandler - WARNING - XRP/USDT:USDT, futures, 15m, data ends at 2026-04-20 01:00:00
+2026-04-22 04:28:28,537 - freqtrade.data.dataprovider - INFO - Loading data for XRP/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:28,563 - freqtrade.data.history.datahandlers.idatahandler - WARNING - XRP/USDT:USDT, futures, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:28,618 - freqtrade.data.dataprovider - INFO - Loading data for XRP/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:28,645 - freqtrade.data.history.datahandlers.idatahandler - WARNING - XRP/USDT:USDT, futures, 4h, data ends at 2026-04-19 08:00:00
+2026-04-22 04:28:28,710 - freqtrade.data.dataprovider - INFO - Loading data for XRP/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:28,722 - freqtrade.data.history.datahandlers.idatahandler - WARNING - XRP/USDT:USDT, futures, 1d, data ends at 2026-04-16 00:00:00
+2026-04-22 04:28:29,254 - freqtrade.data.dataprovider - INFO - Loading data for DOGE/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:29,276 - freqtrade.data.history.datahandlers.idatahandler - WARNING - DOGE/USDT:USDT, futures, 15m, data ends at 2026-04-20 01:00:00
+2026-04-22 04:28:29,317 - freqtrade.data.dataprovider - INFO - Loading data for DOGE/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:29,333 - freqtrade.data.history.datahandlers.idatahandler - WARNING - DOGE/USDT:USDT, futures, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:29,387 - freqtrade.data.dataprovider - INFO - Loading data for DOGE/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:29,398 - freqtrade.data.history.datahandlers.idatahandler - WARNING - DOGE/USDT:USDT, futures, 4h, data ends at 2026-04-19 08:00:00
+2026-04-22 04:28:29,463 - freqtrade.data.dataprovider - INFO - Loading data for DOGE/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:29,473 - freqtrade.data.history.datahandlers.idatahandler - WARNING - DOGE/USDT:USDT, futures, 1d, data ends at 2026-04-16 00:00:00
+2026-04-22 04:28:30,009 - freqtrade.data.dataprovider - INFO - Loading data for ZEC/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:30,031 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ZEC/USDT:USDT, futures, 15m, data ends at 2026-04-20 01:00:00
+2026-04-22 04:28:30,067 - freqtrade.data.dataprovider - INFO - Loading data for ZEC/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:30,084 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ZEC/USDT:USDT, futures, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:30,136 - freqtrade.data.dataprovider - INFO - Loading data for ZEC/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:30,148 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ZEC/USDT:USDT, futures, 4h, data ends at 2026-04-19 08:00:00
+2026-04-22 04:28:30,224 - freqtrade.data.dataprovider - INFO - Loading data for ZEC/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:30,234 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ZEC/USDT:USDT, futures, 1d, data ends at 2026-04-16 00:00:00
+2026-04-22 04:28:30,743 - freqtrade.data.dataprovider - INFO - Loading data for HIGH/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:30,764 - freqtrade.data.history.datahandlers.idatahandler - WARNING - HIGH/USDT:USDT, futures, 15m, data ends at 2026-04-20 01:00:00
+2026-04-22 04:28:30,804 - freqtrade.data.dataprovider - INFO - Loading data for HIGH/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:30,819 - freqtrade.data.history.datahandlers.idatahandler - WARNING - HIGH/USDT:USDT, futures, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:30,870 - freqtrade.data.dataprovider - INFO - Loading data for HIGH/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:30,882 - freqtrade.data.history.datahandlers.idatahandler - WARNING - HIGH/USDT:USDT, futures, 4h, data ends at 2026-04-19 08:00:00
+2026-04-22 04:28:30,943 - freqtrade.data.dataprovider - INFO - Loading data for HIGH/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:30,958 - freqtrade.data.history.datahandlers.idatahandler - WARNING - HIGH/USDT:USDT, futures, 1d, data ends at 2026-04-16 00:00:00
+2026-04-22 04:28:31,532 - freqtrade.data.dataprovider - INFO - Loading data for AAVE/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:31,556 - freqtrade.data.history.datahandlers.idatahandler - WARNING - AAVE/USDT:USDT, futures, 15m, data ends at 2026-04-20 01:00:00
+2026-04-22 04:28:31,598 - freqtrade.data.dataprovider - INFO - Loading data for AAVE/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:31,612 - freqtrade.data.history.datahandlers.idatahandler - WARNING - AAVE/USDT:USDT, futures, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:31,671 - freqtrade.data.dataprovider - INFO - Loading data for AAVE/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:31,684 - freqtrade.data.history.datahandlers.idatahandler - WARNING - AAVE/USDT:USDT, futures, 4h, data ends at 2026-04-19 08:00:00
+2026-04-22 04:28:31,761 - freqtrade.data.dataprovider - INFO - Loading data for AAVE/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:31,771 - freqtrade.data.history.datahandlers.idatahandler - WARNING - AAVE/USDT:USDT, futures, 1d, data ends at 2026-04-16 00:00:00
+2026-04-22 04:28:32,332 - freqtrade.data.dataprovider - INFO - Loading data for BNB/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:32,356 - freqtrade.data.history.datahandlers.idatahandler - WARNING - BNB/USDT:USDT, futures, 15m, data ends at 2026-04-20 01:00:00
+2026-04-22 04:28:32,400 - freqtrade.data.dataprovider - INFO - Loading data for BNB/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:32,419 - freqtrade.data.history.datahandlers.idatahandler - WARNING - BNB/USDT:USDT, futures, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:32,474 - freqtrade.data.dataprovider - INFO - Loading data for BNB/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:32,486 - freqtrade.data.history.datahandlers.idatahandler - WARNING - BNB/USDT:USDT, futures, 4h, data ends at 2026-04-19 08:00:00
+2026-04-22 04:28:32,554 - freqtrade.data.dataprovider - INFO - Loading data for BNB/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:32,564 - freqtrade.data.history.datahandlers.idatahandler - WARNING - BNB/USDT:USDT, futures, 1d, data ends at 2026-04-16 00:00:00
+2026-04-22 04:28:33,085 - freqtrade.data.dataprovider - INFO - Loading data for ENJ/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:33,105 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ENJ/USDT:USDT, futures, 15m, data ends at 2026-04-20 01:00:00
+2026-04-22 04:28:33,145 - freqtrade.data.dataprovider - INFO - Loading data for ENJ/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:33,174 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ENJ/USDT:USDT, futures, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:33,225 - freqtrade.data.dataprovider - INFO - Loading data for ENJ/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:33,249 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ENJ/USDT:USDT, futures, 4h, data ends at 2026-04-19 08:00:00
+2026-04-22 04:28:33,318 - freqtrade.data.dataprovider - INFO - Loading data for ENJ/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:33,342 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ENJ/USDT:USDT, futures, 1d, data ends at 2026-04-16 00:00:00
+2026-04-22 04:28:33,873 - freqtrade.data.dataprovider - INFO - Loading data for ADA/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:33,900 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ADA/USDT:USDT, futures, 15m, data ends at 2026-04-20 01:00:00
+2026-04-22 04:28:33,938 - freqtrade.data.dataprovider - INFO - Loading data for ADA/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:33,955 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ADA/USDT:USDT, futures, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:34,013 - freqtrade.data.dataprovider - INFO - Loading data for ADA/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:34,025 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ADA/USDT:USDT, futures, 4h, data ends at 2026-04-19 08:00:00
+2026-04-22 04:28:34,090 - freqtrade.data.dataprovider - INFO - Loading data for ADA/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:34,105 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ADA/USDT:USDT, futures, 1d, data ends at 2026-04-16 00:00:00
+2026-04-22 04:28:34,632 - freqtrade.data.dataprovider - INFO - Loading data for AVAX/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:34,654 - freqtrade.data.history.datahandlers.idatahandler - WARNING - AVAX/USDT:USDT, futures, 15m, data ends at 2026-04-20 01:00:00
+2026-04-22 04:28:34,691 - freqtrade.data.dataprovider - INFO - Loading data for AVAX/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:34,706 - freqtrade.data.history.datahandlers.idatahandler - WARNING - AVAX/USDT:USDT, futures, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:34,756 - freqtrade.data.dataprovider - INFO - Loading data for AVAX/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:34,768 - freqtrade.data.history.datahandlers.idatahandler - WARNING - AVAX/USDT:USDT, futures, 4h, data ends at 2026-04-19 08:00:00
+2026-04-22 04:28:34,846 - freqtrade.data.dataprovider - INFO - Loading data for AVAX/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:34,859 - freqtrade.data.history.datahandlers.idatahandler - WARNING - AVAX/USDT:USDT, futures, 1d, data ends at 2026-04-16 00:00:00
+2026-04-22 04:28:35,370 - freqtrade.data.dataprovider - INFO - Loading data for GTC/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:35,390 - freqtrade.data.history.datahandlers.idatahandler - WARNING - GTC/USDT:USDT, futures, 15m, data ends at 2026-04-20 01:00:00
+2026-04-22 04:28:35,426 - freqtrade.data.dataprovider - INFO - Loading data for GTC/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:35,440 - freqtrade.data.history.datahandlers.idatahandler - WARNING - GTC/USDT:USDT, futures, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:35,492 - freqtrade.data.dataprovider - INFO - Loading data for GTC/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:35,503 - freqtrade.data.history.datahandlers.idatahandler - WARNING - GTC/USDT:USDT, futures, 4h, data ends at 2026-04-19 08:00:00
+2026-04-22 04:28:35,576 - freqtrade.data.dataprovider - INFO - Loading data for GTC/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:35,584 - freqtrade.data.history.datahandlers.idatahandler - WARNING - GTC/USDT:USDT, futures, 1d, data ends at 2026-04-16 00:00:00
+2026-04-22 04:28:36,099 - freqtrade.data.dataprovider - INFO - Loading data for PHB/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:36,130 - freqtrade.data.history.datahandlers.idatahandler - WARNING - PHB/USDT:USDT, futures, 15m, data ends at 2026-04-20 01:00:00
+2026-04-22 04:28:36,167 - freqtrade.data.dataprovider - INFO - Loading data for PHB/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:36,183 - freqtrade.data.history.datahandlers.idatahandler - WARNING - PHB/USDT:USDT, futures, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:36,234 - freqtrade.data.dataprovider - INFO - Loading data for PHB/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:36,248 - freqtrade.data.history.datahandlers.idatahandler - WARNING - PHB/USDT:USDT, futures, 4h, data ends at 2026-04-19 08:00:00
+2026-04-22 04:28:36,317 - freqtrade.data.dataprovider - INFO - Loading data for PHB/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:36,329 - freqtrade.data.history.datahandlers.idatahandler - WARNING - PHB/USDT:USDT, futures, 1d, data ends at 2026-04-16 00:00:00
+2026-04-22 04:28:36,873 - freqtrade.data.dataprovider - INFO - Loading data for LINK/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:36,895 - freqtrade.data.history.datahandlers.idatahandler - WARNING - LINK/USDT:USDT, futures, 15m, data ends at 2026-04-20 01:00:00
+2026-04-22 04:28:36,932 - freqtrade.data.dataprovider - INFO - Loading data for LINK/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:36,948 - freqtrade.data.history.datahandlers.idatahandler - WARNING - LINK/USDT:USDT, futures, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:37,002 - freqtrade.data.dataprovider - INFO - Loading data for LINK/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:37,013 - freqtrade.data.history.datahandlers.idatahandler - WARNING - LINK/USDT:USDT, futures, 4h, data ends at 2026-04-19 08:00:00
+2026-04-22 04:28:37,087 - freqtrade.data.dataprovider - INFO - Loading data for LINK/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:37,096 - freqtrade.data.history.datahandlers.idatahandler - WARNING - LINK/USDT:USDT, futures, 1d, data ends at 2026-04-16 00:00:00
+2026-04-22 04:28:38,004 - freqtrade.data.dataprovider - INFO - Loading data for TRX/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:38,048 - freqtrade.data.history.datahandlers.idatahandler - WARNING - TRX/USDT:USDT, futures, 15m, data ends at 2026-04-20 01:00:00
+2026-04-22 04:28:38,090 - freqtrade.data.dataprovider - INFO - Loading data for TRX/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:38,116 - freqtrade.data.history.datahandlers.idatahandler - WARNING - TRX/USDT:USDT, futures, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:38,174 - freqtrade.data.dataprovider - INFO - Loading data for TRX/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:38,192 - freqtrade.data.history.datahandlers.idatahandler - WARNING - TRX/USDT:USDT, futures, 4h, data ends at 2026-04-19 08:00:00
+2026-04-22 04:28:38,263 - freqtrade.data.dataprovider - INFO - Loading data for TRX/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:38,287 - freqtrade.data.history.datahandlers.idatahandler - WARNING - TRX/USDT:USDT, futures, 1d, data ends at 2026-04-16 00:00:00
+2026-04-22 04:28:38,812 - freqtrade.data.dataprovider - INFO - Loading data for NEAR/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:38,838 - freqtrade.data.history.datahandlers.idatahandler - WARNING - NEAR/USDT:USDT, futures, 15m, data ends at 2026-04-20 01:00:00
+2026-04-22 04:28:38,878 - freqtrade.data.dataprovider - INFO - Loading data for NEAR/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:38,895 - freqtrade.data.history.datahandlers.idatahandler - WARNING - NEAR/USDT:USDT, futures, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:38,956 - freqtrade.data.dataprovider - INFO - Loading data for NEAR/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:38,970 - freqtrade.data.history.datahandlers.idatahandler - WARNING - NEAR/USDT:USDT, futures, 4h, data ends at 2026-04-19 08:00:00
+2026-04-22 04:28:39,057 - freqtrade.data.dataprovider - INFO - Loading data for NEAR/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:39,070 - freqtrade.data.history.datahandlers.idatahandler - WARNING - NEAR/USDT:USDT, futures, 1d, data ends at 2026-04-16 00:00:00
+2026-04-22 04:28:39,615 - freqtrade.data.dataprovider - INFO - Loading data for DOT/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:39,642 - freqtrade.data.history.datahandlers.idatahandler - WARNING - DOT/USDT:USDT, futures, 15m, data ends at 2026-04-20 01:00:00
+2026-04-22 04:28:39,680 - freqtrade.data.dataprovider - INFO - Loading data for DOT/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:39,698 - freqtrade.data.history.datahandlers.idatahandler - WARNING - DOT/USDT:USDT, futures, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:39,750 - freqtrade.data.dataprovider - INFO - Loading data for DOT/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:39,768 - freqtrade.data.history.datahandlers.idatahandler - WARNING - DOT/USDT:USDT, futures, 4h, data ends at 2026-04-19 08:00:00
+2026-04-22 04:28:39,844 - freqtrade.data.dataprovider - INFO - Loading data for DOT/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:39,871 - freqtrade.data.history.datahandlers.idatahandler - WARNING - DOT/USDT:USDT, futures, 1d, data ends at 2026-04-16 00:00:00
+2026-04-22 04:28:40,417 - freqtrade.data.dataprovider - INFO - Loading data for FIL/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:40,473 - freqtrade.data.history.datahandlers.idatahandler - WARNING - FIL/USDT:USDT, futures, 15m, data ends at 2026-04-20 01:00:00
+2026-04-22 04:28:40,510 - freqtrade.data.dataprovider - INFO - Loading data for FIL/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:40,533 - freqtrade.data.history.datahandlers.idatahandler - WARNING - FIL/USDT:USDT, futures, 1h, data ends at 2026-04-19 22:00:00
+2026-04-22 04:28:40,594 - freqtrade.data.dataprovider - INFO - Loading data for FIL/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:40,610 - freqtrade.data.history.datahandlers.idatahandler - WARNING - FIL/USDT:USDT, futures, 4h, data ends at 2026-04-19 08:00:00
+2026-04-22 04:28:40,683 - freqtrade.data.dataprovider - INFO - Loading data for FIL/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:40,698 - freqtrade.data.history.datahandlers.idatahandler - WARNING - FIL/USDT:USDT, futures, 1d, data ends at 2026-04-16 00:00:00
+2026-04-22 04:28:41,294 - freqtrade.data.dataprovider - INFO - Loading data for CRV/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:41,324 - freqtrade.data.history.datahandlers.idatahandler - WARNING - CRV/USDT:USDT, futures, 15m, data ends at 2026-04-20 02:15:00
+2026-04-22 04:28:41,363 - freqtrade.data.dataprovider - INFO - Loading data for CRV/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:41,385 - freqtrade.data.history.datahandlers.idatahandler - WARNING - CRV/USDT:USDT, futures, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:41,440 - freqtrade.data.dataprovider - INFO - Loading data for CRV/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:41,453 - freqtrade.data.history.datahandlers.idatahandler - WARNING - CRV/USDT:USDT, futures, 4h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:41,525 - freqtrade.data.dataprovider - INFO - Loading data for CRV/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:41,545 - freqtrade.data.history.datahandlers.idatahandler - WARNING - CRV/USDT:USDT, futures, 1d, data ends at 2026-04-18 00:00:00
+2026-04-22 04:28:42,075 - freqtrade.data.dataprovider - INFO - Loading data for 1000SHIB/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:42,139 - freqtrade.data.history.datahandlers.idatahandler - WARNING - 1000SHIB/USDT:USDT, futures, 15m, data ends at 2026-04-20 02:00:00
+2026-04-22 04:28:42,181 - freqtrade.data.dataprovider - INFO - Loading data for 1000SHIB/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:42,209 - freqtrade.data.history.datahandlers.idatahandler - WARNING - 1000SHIB/USDT:USDT, futures, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:42,266 - freqtrade.data.dataprovider - INFO - Loading data for 1000SHIB/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:42,288 - freqtrade.data.history.datahandlers.idatahandler - WARNING - 1000SHIB/USDT:USDT, futures, 4h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:42,363 - freqtrade.data.dataprovider - INFO - Loading data for 1000SHIB/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:42,380 - freqtrade.data.history.datahandlers.idatahandler - WARNING - 1000SHIB/USDT:USDT, futures, 1d, data ends at 2026-04-18 00:00:00
+2026-04-22 04:28:42,935 - freqtrade.data.dataprovider - INFO - Loading data for ARB/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:42,978 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ARB/USDT:USDT, futures, 15m, data ends at 2026-04-20 02:15:00
+2026-04-22 04:28:43,017 - freqtrade.data.dataprovider - INFO - Loading data for ARB/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:43,048 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ARB/USDT:USDT, futures, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:43,104 - freqtrade.data.dataprovider - INFO - Loading data for ARB/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:43,149 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ARB/USDT:USDT, futures, 4h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:43,220 - freqtrade.data.dataprovider - INFO - Loading data for ARB/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:43,241 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ARB/USDT:USDT, futures, 1d, data ends at 2026-04-18 00:00:00
+2026-04-22 04:28:43,794 - freqtrade.data.dataprovider - INFO - Loading data for ALICE/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:43,837 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ALICE/USDT:USDT, futures, 15m, data ends at 2026-04-20 02:15:00
+2026-04-22 04:28:43,874 - freqtrade.data.dataprovider - INFO - Loading data for ALICE/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:43,892 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ALICE/USDT:USDT, futures, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:43,946 - freqtrade.data.dataprovider - INFO - Loading data for ALICE/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:43,973 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ALICE/USDT:USDT, futures, 4h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:44,051 - freqtrade.data.dataprovider - INFO - Loading data for ALICE/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:44,077 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ALICE/USDT:USDT, futures, 1d, data ends at 2026-04-18 00:00:00
+2026-04-22 04:28:44,624 - freqtrade.data.dataprovider - INFO - Loading data for FET/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:44,653 - freqtrade.data.history.datahandlers.idatahandler - WARNING - FET/USDT:USDT, futures, 15m, data ends at 2026-04-20 02:15:00
+2026-04-22 04:28:44,693 - freqtrade.data.dataprovider - INFO - Loading data for FET/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:44,722 - freqtrade.data.history.datahandlers.idatahandler - WARNING - FET/USDT:USDT, futures, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:44,780 - freqtrade.data.dataprovider - INFO - Loading data for FET/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:44,804 - freqtrade.data.history.datahandlers.idatahandler - WARNING - FET/USDT:USDT, futures, 4h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:44,875 - freqtrade.data.dataprovider - INFO - Loading data for FET/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:44,893 - freqtrade.data.history.datahandlers.idatahandler - WARNING - FET/USDT:USDT, futures, 1d, data ends at 2026-04-18 00:00:00
+2026-04-22 04:28:45,493 - freqtrade.data.dataprovider - INFO - Loading data for XLM/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:45,519 - freqtrade.data.history.datahandlers.idatahandler - WARNING - XLM/USDT:USDT, futures, 15m, data ends at 2026-04-20 02:30:00
+2026-04-22 04:28:45,559 - freqtrade.data.dataprovider - INFO - Loading data for XLM/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:45,577 - freqtrade.data.history.datahandlers.idatahandler - WARNING - XLM/USDT:USDT, futures, 1h, data ends at 2026-04-20 01:00:00
+2026-04-22 04:28:45,636 - freqtrade.data.dataprovider - INFO - Loading data for XLM/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:45,648 - freqtrade.data.history.datahandlers.idatahandler - WARNING - XLM/USDT:USDT, futures, 4h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:45,720 - freqtrade.data.dataprovider - INFO - Loading data for XLM/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:45,731 - freqtrade.data.history.datahandlers.idatahandler - WARNING - XLM/USDT:USDT, futures, 1d, data ends at 2026-04-18 00:00:00
+2026-04-22 04:28:46,288 - freqtrade.data.dataprovider - INFO - Loading data for DASH/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:46,330 - freqtrade.data.history.datahandlers.idatahandler - WARNING - DASH/USDT:USDT, futures, 15m, data ends at 2026-04-20 02:15:00
+2026-04-22 04:28:46,371 - freqtrade.data.dataprovider - INFO - Loading data for DASH/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:46,394 - freqtrade.data.history.datahandlers.idatahandler - WARNING - DASH/USDT:USDT, futures, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:46,447 - freqtrade.data.dataprovider - INFO - Loading data for DASH/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:46,460 - freqtrade.data.history.datahandlers.idatahandler - WARNING - DASH/USDT:USDT, futures, 4h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:46,532 - freqtrade.data.dataprovider - INFO - Loading data for DASH/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:46,542 - freqtrade.data.history.datahandlers.idatahandler - WARNING - DASH/USDT:USDT, futures, 1d, data ends at 2026-04-18 00:00:00
+2026-04-22 04:28:47,111 - freqtrade.data.dataprovider - INFO - Loading data for API3/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:47,140 - freqtrade.data.history.datahandlers.idatahandler - WARNING - API3/USDT:USDT, futures, 15m, data ends at 2026-04-20 02:15:00
+2026-04-22 04:28:47,181 - freqtrade.data.dataprovider - INFO - Loading data for API3/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:47,199 - freqtrade.data.history.datahandlers.idatahandler - WARNING - API3/USDT:USDT, futures, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:47,253 - freqtrade.data.dataprovider - INFO - Loading data for API3/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:47,268 - freqtrade.data.history.datahandlers.idatahandler - WARNING - API3/USDT:USDT, futures, 4h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:47,340 - freqtrade.data.dataprovider - INFO - Loading data for API3/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:47,352 - freqtrade.data.history.datahandlers.idatahandler - WARNING - API3/USDT:USDT, futures, 1d, data ends at 2026-04-18 00:00:00
+2026-04-22 04:28:47,937 - freqtrade.data.dataprovider - INFO - Loading data for APT/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:47,985 - freqtrade.data.history.datahandlers.idatahandler - WARNING - APT/USDT:USDT, futures, 15m, data ends at 2026-04-20 02:15:00
+2026-04-22 04:28:48,025 - freqtrade.data.dataprovider - INFO - Loading data for APT/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:48,046 - freqtrade.data.history.datahandlers.idatahandler - WARNING - APT/USDT:USDT, futures, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:48,098 - freqtrade.data.dataprovider - INFO - Loading data for APT/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:48,118 - freqtrade.data.history.datahandlers.idatahandler - WARNING - APT/USDT:USDT, futures, 4h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:48,189 - freqtrade.data.dataprovider - INFO - Loading data for APT/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:48,202 - freqtrade.data.history.datahandlers.idatahandler - WARNING - APT/USDT:USDT, futures, 1d, data ends at 2026-04-18 00:00:00
+2026-04-22 04:28:48,736 - freqtrade.data.dataprovider - INFO - Loading data for XMR/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:48,764 - freqtrade.data.history.datahandlers.idatahandler - WARNING - XMR/USDT:USDT, futures, 15m, data ends at 2026-04-20 02:30:00
+2026-04-22 04:28:48,802 - freqtrade.data.dataprovider - INFO - Loading data for XMR/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:48,819 - freqtrade.data.history.datahandlers.idatahandler - WARNING - XMR/USDT:USDT, futures, 1h, data ends at 2026-04-20 01:00:00
+2026-04-22 04:28:48,871 - freqtrade.data.dataprovider - INFO - Loading data for XMR/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:48,886 - freqtrade.data.history.datahandlers.idatahandler - WARNING - XMR/USDT:USDT, futures, 4h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:48,957 - freqtrade.data.dataprovider - INFO - Loading data for XMR/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:48,968 - freqtrade.data.history.datahandlers.idatahandler - WARNING - XMR/USDT:USDT, futures, 1d, data ends at 2026-04-18 00:00:00
+2026-04-22 04:28:49,507 - freqtrade.data.dataprovider - INFO - Loading data for DYDX/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:49,544 - freqtrade.data.history.datahandlers.idatahandler - WARNING - DYDX/USDT:USDT, futures, 15m, data ends at 2026-04-20 02:15:00
+2026-04-22 04:28:49,582 - freqtrade.data.dataprovider - INFO - Loading data for DYDX/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:49,612 - freqtrade.data.history.datahandlers.idatahandler - WARNING - DYDX/USDT:USDT, futures, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:49,662 - freqtrade.data.dataprovider - INFO - Loading data for DYDX/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:49,676 - freqtrade.data.history.datahandlers.idatahandler - WARNING - DYDX/USDT:USDT, futures, 4h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:49,741 - freqtrade.data.dataprovider - INFO - Loading data for DYDX/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:49,752 - freqtrade.data.history.datahandlers.idatahandler - WARNING - DYDX/USDT:USDT, futures, 1d, data ends at 2026-04-18 00:00:00
+2026-04-22 04:28:50,328 - freqtrade.data.dataprovider - INFO - Loading data for GALA/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:50,353 - freqtrade.data.history.datahandlers.idatahandler - WARNING - GALA/USDT:USDT, futures, 15m, data ends at 2026-04-20 02:15:00
+2026-04-22 04:28:50,391 - freqtrade.data.dataprovider - INFO - Loading data for GALA/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:50,412 - freqtrade.data.history.datahandlers.idatahandler - WARNING - GALA/USDT:USDT, futures, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:50,475 - freqtrade.data.dataprovider - INFO - Loading data for GALA/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:50,502 - freqtrade.data.history.datahandlers.idatahandler - WARNING - GALA/USDT:USDT, futures, 4h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:50,577 - freqtrade.data.dataprovider - INFO - Loading data for GALA/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:50,589 - freqtrade.data.history.datahandlers.idatahandler - WARNING - GALA/USDT:USDT, futures, 1d, data ends at 2026-04-18 00:00:00
+2026-04-22 04:28:51,163 - freqtrade.data.dataprovider - INFO - Loading data for HBAR/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:51,203 - freqtrade.data.history.datahandlers.idatahandler - WARNING - HBAR/USDT:USDT, futures, 15m, data ends at 2026-04-20 02:15:00
+2026-04-22 04:28:51,241 - freqtrade.data.dataprovider - INFO - Loading data for HBAR/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:51,265 - freqtrade.data.history.datahandlers.idatahandler - WARNING - HBAR/USDT:USDT, futures, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:51,317 - freqtrade.data.dataprovider - INFO - Loading data for HBAR/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:51,353 - freqtrade.data.history.datahandlers.idatahandler - WARNING - HBAR/USDT:USDT, futures, 4h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:51,423 - freqtrade.data.dataprovider - INFO - Loading data for HBAR/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:51,434 - freqtrade.data.history.datahandlers.idatahandler - WARNING - HBAR/USDT:USDT, futures, 1d, data ends at 2026-04-18 00:00:00
+2026-04-22 04:28:51,987 - freqtrade.data.dataprovider - INFO - Loading data for OP/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:52,012 - freqtrade.data.history.datahandlers.idatahandler - WARNING - OP/USDT:USDT, futures, 15m, data ends at 2026-04-20 02:15:00
+2026-04-22 04:28:52,051 - freqtrade.data.dataprovider - INFO - Loading data for OP/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:52,069 - freqtrade.data.history.datahandlers.idatahandler - WARNING - OP/USDT:USDT, futures, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:52,123 - freqtrade.data.dataprovider - INFO - Loading data for OP/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:52,136 - freqtrade.data.history.datahandlers.idatahandler - WARNING - OP/USDT:USDT, futures, 4h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:52,210 - freqtrade.data.dataprovider - INFO - Loading data for OP/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:52,230 - freqtrade.data.history.datahandlers.idatahandler - WARNING - OP/USDT:USDT, futures, 1d, data ends at 2026-04-18 00:00:00
+2026-04-22 04:28:52,789 - freqtrade.data.dataprovider - INFO - Loading data for CHZ/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:52,830 - freqtrade.data.history.datahandlers.idatahandler - WARNING - CHZ/USDT:USDT, futures, 15m, data ends at 2026-04-20 02:15:00
+2026-04-22 04:28:52,869 - freqtrade.data.dataprovider - INFO - Loading data for CHZ/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:52,886 - freqtrade.data.history.datahandlers.idatahandler - WARNING - CHZ/USDT:USDT, futures, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:52,940 - freqtrade.data.dataprovider - INFO - Loading data for CHZ/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:52,955 - freqtrade.data.history.datahandlers.idatahandler - WARNING - CHZ/USDT:USDT, futures, 4h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:53,027 - freqtrade.data.dataprovider - INFO - Loading data for CHZ/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:53,037 - freqtrade.data.history.datahandlers.idatahandler - WARNING - CHZ/USDT:USDT, futures, 1d, data ends at 2026-04-18 00:00:00
+2026-04-22 04:28:53,597 - freqtrade.data.dataprovider - INFO - Loading data for LDO/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:53,639 - freqtrade.data.history.datahandlers.idatahandler - WARNING - LDO/USDT:USDT, futures, 15m, data ends at 2026-04-20 02:15:00
+2026-04-22 04:28:53,677 - freqtrade.data.dataprovider - INFO - Loading data for LDO/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:53,703 - freqtrade.data.history.datahandlers.idatahandler - WARNING - LDO/USDT:USDT, futures, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:53,757 - freqtrade.data.dataprovider - INFO - Loading data for LDO/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:53,772 - freqtrade.data.history.datahandlers.idatahandler - WARNING - LDO/USDT:USDT, futures, 4h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:53,846 - freqtrade.data.dataprovider - INFO - Loading data for LDO/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:53,865 - freqtrade.data.history.datahandlers.idatahandler - WARNING - LDO/USDT:USDT, futures, 1d, data ends at 2026-04-18 00:00:00
+2026-04-22 04:28:54,455 - freqtrade.data.dataprovider - INFO - Loading data for TRB/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:54,482 - freqtrade.data.history.datahandlers.idatahandler - WARNING - TRB/USDT:USDT, futures, 15m, data ends at 2026-04-20 02:15:00
+2026-04-22 04:28:54,521 - freqtrade.data.dataprovider - INFO - Loading data for TRB/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:54,539 - freqtrade.data.history.datahandlers.idatahandler - WARNING - TRB/USDT:USDT, futures, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:54,594 - freqtrade.data.dataprovider - INFO - Loading data for TRB/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:54,608 - freqtrade.data.history.datahandlers.idatahandler - WARNING - TRB/USDT:USDT, futures, 4h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:54,687 - freqtrade.data.dataprovider - INFO - Loading data for TRB/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:54,700 - freqtrade.data.history.datahandlers.idatahandler - WARNING - TRB/USDT:USDT, futures, 1d, data ends at 2026-04-18 00:00:00
+2026-04-22 04:28:55,246 - freqtrade.data.dataprovider - INFO - Loading data for ICP/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:55,272 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ICP/USDT:USDT, futures, 15m, data ends at 2026-04-20 02:15:00
+2026-04-22 04:28:55,312 - freqtrade.data.dataprovider - INFO - Loading data for ICP/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:55,327 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ICP/USDT:USDT, futures, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:55,383 - freqtrade.data.dataprovider - INFO - Loading data for ICP/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:55,454 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ICP/USDT:USDT, futures, 4h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:55,535 - freqtrade.data.dataprovider - INFO - Loading data for ICP/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:55,547 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ICP/USDT:USDT, futures, 1d, data ends at 2026-04-18 00:00:00
+2026-04-22 04:28:56,094 - freqtrade.data.dataprovider - INFO - Loading data for AR/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:56,121 - freqtrade.data.history.datahandlers.idatahandler - WARNING - AR/USDT:USDT, futures, 15m, data ends at 2026-04-20 02:15:00
+2026-04-22 04:28:56,160 - freqtrade.data.dataprovider - INFO - Loading data for AR/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:56,180 - freqtrade.data.history.datahandlers.idatahandler - WARNING - AR/USDT:USDT, futures, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:56,234 - freqtrade.data.dataprovider - INFO - Loading data for AR/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:56,249 - freqtrade.data.history.datahandlers.idatahandler - WARNING - AR/USDT:USDT, futures, 4h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:56,324 - freqtrade.data.dataprovider - INFO - Loading data for AR/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:56,336 - freqtrade.data.history.datahandlers.idatahandler - WARNING - AR/USDT:USDT, futures, 1d, data ends at 2026-04-18 00:00:00
+2026-04-22 04:28:56,888 - freqtrade.data.dataprovider - INFO - Loading data for ZEN/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:56,913 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ZEN/USDT:USDT, futures, 15m, data ends at 2026-04-20 02:30:00
+2026-04-22 04:28:56,954 - freqtrade.data.dataprovider - INFO - Loading data for ZEN/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:56,971 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ZEN/USDT:USDT, futures, 1h, data ends at 2026-04-20 01:00:00
+2026-04-22 04:28:57,025 - freqtrade.data.dataprovider - INFO - Loading data for ZEN/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:57,040 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ZEN/USDT:USDT, futures, 4h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:57,119 - freqtrade.data.dataprovider - INFO - Loading data for ZEN/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:57,132 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ZEN/USDT:USDT, futures, 1d, data ends at 2026-04-18 00:00:00
+2026-04-22 04:28:57,696 - freqtrade.data.dataprovider - INFO - Loading data for INJ/USDT:USDT 15m from 2025-10-13 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:57,757 - freqtrade.data.history.datahandlers.idatahandler - WARNING - INJ/USDT:USDT, futures, 15m, data ends at 2026-04-20 02:15:00
+2026-04-22 04:28:57,801 - freqtrade.data.dataprovider - INFO - Loading data for INJ/USDT:USDT 1h from 2025-09-18 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:57,825 - freqtrade.data.history.datahandlers.idatahandler - WARNING - INJ/USDT:USDT, futures, 1h, data ends at 2026-04-20 00:00:00
+2026-04-22 04:28:57,886 - freqtrade.data.dataprovider - INFO - Loading data for INJ/USDT:USDT 4h from 2025-06-10 16:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:57,908 - freqtrade.data.history.datahandlers.idatahandler - WARNING - INJ/USDT:USDT, futures, 4h, data ends at 2026-04-19 16:00:00
+2026-04-22 04:28:57,995 - freqtrade.data.dataprovider - INFO - Loading data for INJ/USDT:USDT 1d from 2023-08-14 00:00:00 to 2026-04-22 00:00:00
+2026-04-22 04:28:58,052 - freqtrade.data.history.datahandlers.idatahandler - WARNING - INJ/USDT:USDT, futures, 1d, data ends at 2026-04-18 00:00:00
+2026-04-22 04:29:00,475 - freqtrade.optimize.backtesting - INFO - Backtesting with data from 2025-10-22 00:00:00 up to 2026-04-20 02:50:00 (180 days).
+2026-04-22 04:29:00,476 - freqtrade.plugins.protectionmanager - INFO - No protection Handlers defined.
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+/freqtrade/freqtrade/optimize/backtesting.py:511: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  .replace([nan], [0 if not tag_col else None])
+2026-04-22 04:29:44,334 - NostalgiaForInfinityX7 - INFO - Grinding exit (gm0) [ZEC/USDT:USDT] | Rate: 269.83 | Stake amount: 22.888216666666665 | Coin amount: 0.08482458090896737 | Profit (stake): 
+3.184926848020001 | Profit: 3.44% | Grind profit: 3.49% (2.39380865421492 USDT)
+2026-04-22 04:29:45,112 - NostalgiaForInfinityX7 - INFO - Grinding entry (gd1) [2025-10-26 23:30:00+00:00] [ZEC/USDT:USDT] | Rate: 334.96 | Stake amount: 37.04359253999999 | Profit (stake): 
+9.796566611094631 | Profit: 10.58% | Grind profit: 0.00% (0.0 USDT)
+2026-04-22 04:29:45,130 - NostalgiaForInfinityX7 - INFO - Grinding exit (gd1) [2025-10-27 00:15:00+00:00] [ZEC/USDT:USDT] | Rate: 342.07 | Stake amount: 37.74172333333333 | Coin amount: 0.331 | Profit
+(stake): 12.741664991894833 | Profit: 6.26% | Grind profit: 2.12% (2.403364457547174 USDT)
+2026-04-22 04:29:46,598 - NostalgiaForInfinityX7 - INFO - Grinding entry (gd1) [2025-10-30 04:55:00+00:00] [ZEC/USDT:USDT] | Rate: 339.94 | Stake amount: 37.04359253999999 | Profit (stake): 
+12.556612348213843 | Profit: 6.17% | Grind profit: 0.00% (0.0 USDT)
+2026-04-22 04:29:46,641 - NostalgiaForInfinityX7 - INFO - Grinding exit (gd1) [2025-10-30 07:10:00+00:00] [ZEC/USDT:USDT] | Rate: 348.02 | Stake amount: 37.818173333333334 | Coin amount: 0.326 | 
+Profit (stake): 15.894226828213828 | Profit: 5.06% | Grind profit: 2.38% (2.696689185150315 USDT)
+2026-04-22 04:29:46,769 - NostalgiaForInfinityX7 - INFO - Grinding entry (gd1) [2025-10-30 13:40:00+00:00] [ZEC/USDT:USDT] | Rate: 326.87 | Stake amount: 37.04359253999999 | Profit (stake): 
+13.763461370812847 | Profit: 4.38% | Grind profit: 0.00% (0.0 USDT)
+2026-04-22 04:29:46,800 - NostalgiaForInfinityX7 - INFO - Grinding exit (gd1) [2025-10-30 14:45:00+00:00] [ZEC/USDT:USDT] | Rate: 333.94 | Stake amount: 37.735220000000005 | Coin amount: 0.339 | 
+Profit (stake): 16.76896350581285 | Profit: 3.94% | Grind profit: 2.16% (2.448569817358581 USDT)
+2026-04-22 04:29:47,751 - NostalgiaForInfinityX7 - INFO - [2025-11-04 18:40:00+00:00] Cancelling entry for LDO/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:29:47,752 - NostalgiaForInfinityX7 - INFO - Grinding exit (gm0) [CRV/USDT:USDT] | Rate: 0.418 | Stake amount: 31.155999999999995 | Coin amount: 74.5358851674641 | Profit (stake): 
+4.4977149999999995 | Profit: 3.88% | Grind profit: 3.98% (3.720119402985064 USDT)
+2026-04-22 04:29:49,442 - NostalgiaForInfinityX7 - INFO - [2025-11-08 04:30:00+00:00] Cancelling entry for INJ/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:29:50,549 - NostalgiaForInfinityX7 - INFO - [2025-11-10 13:55:00+00:00] Cancelling entry for ICP/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:29:50,888 - NostalgiaForInfinityX7 - INFO - [2025-11-11 05:05:00+00:00] Cancelling entry for ICP/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:29:50,891 - NostalgiaForInfinityX7 - INFO - [2025-11-11 05:10:00+00:00] Cancelling entry for ICP/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:29:52,286 - NostalgiaForInfinityX7 - INFO - Grinding entry (gd1) [2025-11-14 04:40:00+00:00] [CRV/USDT:USDT] | Rate: 0.422 | Stake amount: 46.4139954 | Profit (stake): 4.726533651286982 
+| Profit: 4.07% | Grind profit: 0.00% (0.0 USDT)
+2026-04-22 04:29:52,289 - NostalgiaForInfinityX7 - INFO - [2025-11-14 04:40:00+00:00] Cancelling entry for ETH/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:29:52,289 - NostalgiaForInfinityX7 - INFO - [2025-11-14 04:40:00+00:00] Cancelling entry for SOL/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:29:52,290 - NostalgiaForInfinityX7 - INFO - [2025-11-14 04:40:00+00:00] Cancelling entry for ZEC/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:29:52,290 - NostalgiaForInfinityX7 - INFO - [2025-11-14 04:40:00+00:00] Cancelling entry for BNB/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:29:52,291 - NostalgiaForInfinityX7 - INFO - [2025-11-14 04:40:00+00:00] Cancelling entry for LINK/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:29:52,291 - NostalgiaForInfinityX7 - INFO - [2025-11-14 04:40:00+00:00] Cancelling entry for APT/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:29:52,307 - NostalgiaForInfinityX7 - INFO - Grinding exit (gd1) [2025-11-14 04:55:00+00:00] [CRV/USDT:USDT] | Rate: 0.432 | Stake amount: 47.505599999999994 | Coin amount: 329.9 | Profit
+(stake): 8.533341851286991 | Profit: 3.34% | Grind profit: 2.37% (3.3771753554502393 USDT)
+2026-04-22 04:29:52,384 - NostalgiaForInfinityX7 - INFO - [2025-11-14 08:10:00+00:00] Cancelling entry for ICP/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:29:52,451 - NostalgiaForInfinityX7 - INFO - [2025-11-14 11:55:00+00:00] Cancelling entry for XMR/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:29:52,671 - NostalgiaForInfinityX7 - INFO - [2025-11-14 23:10:00+00:00] Cancelling entry for AAVE/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:29:52,671 - NostalgiaForInfinityX7 - INFO - [2025-11-14 23:10:00+00:00] Cancelling entry for FIL/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:29:52,672 - NostalgiaForInfinityX7 - INFO - [2025-11-14 23:10:00+00:00] Cancelling entry for ARB/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:29:52,673 - NostalgiaForInfinityX7 - INFO - [2025-11-14 23:10:00+00:00] Cancelling entry for GALA/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:29:52,673 - NostalgiaForInfinityX7 - INFO - [2025-11-14 23:10:00+00:00] Cancelling entry for OP/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:29:53,377 - NostalgiaForInfinityX7 - INFO - [2025-11-16 04:35:00+00:00] Cancelling entry for ZEC/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:29:54,842 - NostalgiaForInfinityX7 - INFO - [2025-11-18 03:05:00+00:00] Cancelling entry for ICP/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:29:54,865 - NostalgiaForInfinityX7 - INFO - [2025-11-18 03:35:00+00:00] Cancelling entry for ICP/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:29:55,069 - NostalgiaForInfinityX7 - INFO - [2025-11-18 11:55:00+00:00] Cancelling entry for ICP/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:29:55,840 - NostalgiaForInfinityX7 - INFO - [2025-11-19 16:20:00+00:00] Cancelling entry for ZEC/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:29:56,362 - NostalgiaForInfinityX7 - INFO - [2025-11-20 16:10:00+00:00] Cancelling entry for FIL/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:29:56,363 - NostalgiaForInfinityX7 - INFO - [2025-11-20 16:10:00+00:00] Cancelling entry for DYDX/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:29:56,365 - NostalgiaForInfinityX7 - INFO - [2025-11-20 16:10:00+00:00] Cancelling entry for GALA/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:29:56,365 - NostalgiaForInfinityX7 - INFO - [2025-11-20 16:10:00+00:00] Cancelling entry for OP/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:29:56,372 - NostalgiaForInfinityX7 - INFO - Grinding entry (gd1) [2025-11-20 16:30:00+00:00] [CRV/USDT:USDT] | Rate: 0.427 | Stake amount: 46.4139954 | Profit (stake): 8.169548682672858 
+| Profit: 3.20% | Grind profit: 0.00% (0.0 USDT)
+2026-04-22 04:29:56,740 - NostalgiaForInfinityX7 - INFO - Grinding entry (gd2) [2025-11-21 07:40:00+00:00] [CRV/USDT:USDT] | Rate: 0.387 | Stake amount: 38.6783295 | Profit (stake): -7.58330561093516 
+| Profit: -1.92% | Grind profit: 0.00% (0.0 USDT)
+2026-04-22 04:29:57,086 - NostalgiaForInfinityX7 - INFO - [2025-11-21 18:05:00+00:00] Cancelling entry for ZEC/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:29:57,088 - NostalgiaForInfinityX7 - INFO - [2025-11-21 18:10:00+00:00] Cancelling entry for ZEC/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:29:57,860 - NostalgiaForInfinityX7 - INFO - [2025-11-22 20:40:00+00:00] Cancelling entry for ZEC/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:29:58,113 - NostalgiaForInfinityX7 - INFO - [2025-11-23 07:05:00+00:00] Cancelling entry for ZEC/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:29:58,117 - NostalgiaForInfinityX7 - INFO - [2025-11-23 07:10:00+00:00] Cancelling entry for ZEC/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:29:58,364 - NostalgiaForInfinityX7 - INFO - Grinding exit (gd2) [2025-11-23 18:40:00+00:00] [CRV/USDT:USDT] | Rate: 0.395 | Stake amount: 39.47366666666667 | Coin amount: 299.8 | Profit 
+(stake): -1.9906571311507901 | Profit: -0.39% | Grind profit: 2.07% (2.4479793281653768 USDT)
+2026-04-22 04:29:59,352 - NostalgiaForInfinityX7 - INFO - [2025-11-25 11:20:00+00:00] Cancelling entry for ZEC/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:30:00,119 - NostalgiaForInfinityX7 - INFO - Grinding exit (gd1) [2025-11-26 18:00:00+00:00] [CRV/USDT:USDT] | Rate: 0.437 | Stake amount: 47.48733333333333 | Coin amount: 326.0 | Profit 
+(stake): 14.314228331378738 | Profit: 2.80% | Grind profit: 2.34% (3.3363466042154597 USDT)
+2026-04-22 04:30:02,675 - NostalgiaForInfinityX7 - INFO - Grinding entry (gd1) [2025-12-01 00:15:00+00:00] [CRV/USDT:USDT] | Rate: 0.406 | Stake amount: 46.4139954 | Profit (stake): 12.273838491270066
+| Profit: 2.40% | Grind profit: 0.00% (0.0 USDT)
+2026-04-22 04:30:04,290 - NostalgiaForInfinityX7 - INFO - [2025-12-02 18:30:00+00:00] Cancelling entry for ZEC/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:30:04,294 - NostalgiaForInfinityX7 - INFO - [2025-12-02 18:40:00+00:00] Cancelling entry for ZEC/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:30:05,159 - NostalgiaForInfinityX7 - INFO - Grinding exit (gd1) [2025-12-03 22:50:00+00:00] [CRV/USDT:USDT] | Rate: 0.415 | Stake amount: 47.398333333333326 | Coin amount: 342.9 | Profit
+(stake): 15.832893148470486 | Profit: 2.44% | Grind profit: 2.22% (3.152105911330032 USDT)
+2026-04-22 04:30:06,426 - NostalgiaForInfinityX7 - INFO - [2025-12-05 16:10:00+00:00] Cancelling entry for ZEC/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:30:07,054 - NostalgiaForInfinityX7 - INFO - [2025-12-06 15:25:00+00:00] Cancelling entry for ZEC/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:30:07,677 - NostalgiaForInfinityX7 - INFO - [2025-12-07 14:25:00+00:00] Cancelling entry for DYDX/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:30:09,993 - NostalgiaForInfinityX7 - INFO - Grinding entry (gd1) [2025-12-11 01:00:00+00:00] [CRV/USDT:USDT] | Rate: 0.395 | Stake amount: 46.4139954 | Profit (stake): 14.496169453949092
+| Profit: 2.23% | Grind profit: 0.00% (0.0 USDT)
+2026-04-22 04:30:10,889 - NostalgiaForInfinityX7 - INFO - Grinding exit (gd1) [2025-12-12 05:05:00+00:00] [CRV/USDT:USDT] | Rate: 0.403 | Stake amount: 47.09623333333333 | Coin amount: 352.5 | Profit 
+(stake): 17.710755583453867 | Profit: 2.24% | Grind profit: 2.03% (2.861543291139243 USDT)
+2026-04-22 04:30:12,021 - NostalgiaForInfinityX7 - INFO - Grinding entry (gd1) [2025-12-13 18:10:00+00:00] [CRV/USDT:USDT] | Rate: 0.401 | Stake amount: 46.4139954 | Profit (stake): 17.562652644467075
+| Profit: 2.23% | Grind profit: 0.00% (0.0 USDT)
+2026-04-22 04:30:15,337 - NostalgiaForInfinityX7 - INFO - Grinding entry (gd2) [2025-12-17 16:20:00+00:00] [CRV/USDT:USDT] | Rate: 0.352 | Stake amount: 38.6783295 | Profit (stake): 
+-2.8241806463662713 | Profit: -0.30% | Grind profit: 0.00% (0.0 USDT)
+2026-04-22 04:30:15,360 - NostalgiaForInfinityX7 - INFO - Grinding exit (gd2) [2025-12-17 17:00:00+00:00] [CRV/USDT:USDT] | Rate: 0.359 | Stake amount: 39.44213333333334 | Coin amount: 329.6 | Profit 
+(stake): 2.2665954536336996 | Profit: 0.22% | Grind profit: 1.99% (2.353081818181821 USDT)
+2026-04-22 04:30:15,382 - NostalgiaForInfinityX7 - INFO - [2025-12-17 17:10:00+00:00] Cancelling entry for SOL/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:30:16,143 - NostalgiaForInfinityX7 - INFO - [2025-12-18 17:10:00+00:00] Cancelling entry for ETH/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:30:16,144 - NostalgiaForInfinityX7 - INFO - [2025-12-18 17:10:00+00:00] Cancelling entry for DOGE/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:30:16,145 - NostalgiaForInfinityX7 - INFO - [2025-12-18 17:10:00+00:00] Cancelling entry for AAVE/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:30:16,147 - NostalgiaForInfinityX7 - INFO - [2025-12-18 17:10:00+00:00] Cancelling entry for ADA/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:30:16,148 - NostalgiaForInfinityX7 - INFO - [2025-12-18 17:10:00+00:00] Cancelling entry for AVAX/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:30:16,149 - NostalgiaForInfinityX7 - INFO - [2025-12-18 17:10:00+00:00] Cancelling entry for LINK/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:30:16,150 - NostalgiaForInfinityX7 - INFO - [2025-12-18 17:10:00+00:00] Cancelling entry for DOT/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:30:16,150 - NostalgiaForInfinityX7 - INFO - [2025-12-18 17:10:00+00:00] Cancelling entry for FIL/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:30:16,151 - NostalgiaForInfinityX7 - INFO - [2025-12-18 17:10:00+00:00] Cancelling entry for ARB/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:30:16,151 - NostalgiaForInfinityX7 - INFO - [2025-12-18 17:10:00+00:00] Cancelling entry for DYDX/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:30:16,152 - NostalgiaForInfinityX7 - INFO - [2025-12-18 17:10:00+00:00] Cancelling entry for GALA/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:30:16,152 - NostalgiaForInfinityX7 - INFO - [2025-12-18 17:10:00+00:00] Cancelling entry for HBAR/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:30:16,153 - NostalgiaForInfinityX7 - INFO - [2025-12-18 17:10:00+00:00] Cancelling entry for LDO/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:30:16,153 - NostalgiaForInfinityX7 - INFO - [2025-12-18 17:10:00+00:00] Cancelling entry for ICP/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:30:27,749 - NostalgiaForInfinityX7 - INFO - Grinding exit (gd1) [2026-01-02 16:35:00+00:00] [CRV/USDT:USDT] | Rate: 0.411 | Stake amount: 47.566399999999994 | Coin amount: 347.2 | Profit
+(stake): 23.450112953150825 | Profit: 2.24% | Grind profit: 2.49% (3.558583541147115 USDT)
+2026-04-22 04:30:40,649 - NostalgiaForInfinityX7 - INFO - Grinding entry (gd1) [2026-01-19 00:20:00+00:00] [CRV/USDT:USDT] | Rate: 0.381 | Stake amount: 46.4139954 | Profit (stake): 21.381776514805395
+| Profit: 2.05% | Grind profit: 0.00% (0.0 USDT)
+2026-04-22 04:30:40,675 - NostalgiaForInfinityX7 - INFO - Grinding exit (gd1) [2026-01-19 00:40:00+00:00] [CRV/USDT:USDT] | Rate: 0.389 | Stake amount: 47.07806666666667 | Coin amount: 365.4 | Profit 
+(stake): 24.703227914805566 | Profit: 2.09% | Grind profit: 2.10% (2.9655475065616828 USDT)
+2026-04-22 04:30:49,519 - NostalgiaForInfinityX7 - INFO - [2026-01-30 02:25:00+00:00] Cancelling entry for XMR/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:30:50,033 - NostalgiaForInfinityX7 - INFO - Grinding entry (gd1) [2026-01-30 18:25:00+00:00] [CRV/USDT:USDT] | Rate: 0.312 | Stake amount: 46.4139954 | Profit (stake): 19.31361022133773 
+| Profit: 1.63% | Grind profit: 0.00% (0.0 USDT)
+2026-04-22 04:30:50,039 - NostalgiaForInfinityX7 - INFO - [2026-01-30 18:25:00+00:00] Cancelling entry for ZEC/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:30:50,039 - NostalgiaForInfinityX7 - INFO - [2026-01-30 18:25:00+00:00] Cancelling entry for LDO/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:30:50,050 - NostalgiaForInfinityX7 - INFO - Grinding exit (gd1) [2026-01-30 18:45:00+00:00] [CRV/USDT:USDT] | Rate: 0.32 | Stake amount: 45.998333333333335 | Coin amount: 446.2 | Profit 
+(stake): 23.300331821337775 | Profit: 1.76% | Grind profit: 2.56% (3.5383333333333615 USDT)
+2026-04-22 04:30:50,872 - NostalgiaForInfinityX7 - INFO - Grinding entry (gd1) [2026-01-31 17:20:00+00:00] [CRV/USDT:USDT] | Rate: 0.283 | Stake amount: 46.4139954 | Profit (stake): 20.157505075155044
+| Profit: 1.52% | Grind profit: 0.00% (0.0 USDT)
+2026-04-22 04:30:51,198 - NostalgiaForInfinityX7 - INFO - Grinding exit (gd1) [2026-01-31 23:25:00+00:00] [CRV/USDT:USDT] | Rate: 0.29 | Stake amount: 46.71566666666665 | Coin amount: 492.0 | Profit 
+(stake): 24.053850275155146 | Profit: 1.64% | Grind profit: 2.47% (3.4665335689045955 USDT)
+2026-04-22 04:30:52,199 - NostalgiaForInfinityX7 - INFO - [2026-02-01 23:10:00+00:00] Cancelling entry for SOL/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:30:52,200 - NostalgiaForInfinityX7 - INFO - [2026-02-01 23:10:00+00:00] Cancelling entry for DOGE/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:30:52,202 - NostalgiaForInfinityX7 - INFO - [2026-02-01 23:10:00+00:00] Cancelling entry for LINK/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:30:52,203 - NostalgiaForInfinityX7 - INFO - [2026-02-01 23:10:00+00:00] Cancelling entry for XMR/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:30:52,203 - NostalgiaForInfinityX7 - INFO - [2026-02-01 23:10:00+00:00] Cancelling entry for OP/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:30:52,203 - NostalgiaForInfinityX7 - INFO - [2026-02-01 23:10:00+00:00] Cancelling entry for LDO/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:30:56,566 - NostalgiaForInfinityX7 - INFO - Grinding entry (gd1) [2026-02-05 20:20:00+00:00] [CRV/USDT:USDT] | Rate: 0.235 | Stake amount: 46.4139954 | Profit (stake): 18.869148450525582
+| Profit: 1.29% | Grind profit: 0.00% (0.0 USDT)
+2026-04-22 04:30:56,585 - NostalgiaForInfinityX7 - WARNING - [2026-02-05 20:35:00+00:00] Cancelling entry for GTC/USDT:USDT due to slippage 1.12%
+2026-04-22 04:30:56,812 - NostalgiaForInfinityX7 - INFO - Grinding entry (gd2) [2026-02-06 00:25:00+00:00] [CRV/USDT:USDT] | Rate: 0.212 | Stake amount: 38.6783295 | Profit (stake): 2.9417208005256614
+| Profit: 0.18% | Grind profit: 0.00% (0.0 USDT)
+2026-04-22 04:30:56,828 - NostalgiaForInfinityX7 - INFO - Grinding exit (gd2) [2026-02-06 00:35:00+00:00] [CRV/USDT:USDT] | Rate: 0.222 | Stake amount: 40.5002 | Coin amount: 547.3 | Profit (stake): 
+15.153526200526176 | Profit: 0.88% | Grind profit: 4.72% (5.731160377358496 USDT)
+2026-04-22 04:30:57,475 - NostalgiaForInfinityX7 - INFO - Grinding exit (gd1) [2026-02-06 13:00:00+00:00] [CRV/USDT:USDT] | Rate: 0.24 | Stake amount: 45.846333333333334 | Coin amount: 592.5 | Profit 
+(stake): 27.485865092746174 | Profit: 1.60% | Grind profit: 2.13% (2.926361702127679 USDT)
+2026-04-22 04:30:57,783 - NostalgiaForInfinityX7 - INFO - [2026-02-11 15:10:00+00:00] Cancelling entry for CRV/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:30:57,784 - NostalgiaForInfinityX7 - INFO - [2026-02-11 15:10:00+00:00] Cancelling entry for LDO/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:30:57,802 - NostalgiaForInfinityX7 - INFO - Grinding exit (gm0) [ETH/USDT:USDT] | Rate: 1952.3 | Stake amount: 49.73453333333333 | Coin amount: 0.025474841639775307 | Profit (stake): 
+5.023296414622129 | Profit: 1.99% | Grind profit: 2.08% (3.1010133591278652 USDT)
+2026-04-22 04:30:59,281 - NostalgiaForInfinityX7 - INFO - [2026-02-15 13:40:00+00:00] Cancelling entry for ZEC/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:31:03,570 - NostalgiaForInfinityX7 - INFO - [2026-02-26 16:55:00+00:00] Cancelling entry for OP/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:31:03,570 - NostalgiaForInfinityX7 - INFO - [2026-02-26 16:55:00+00:00] Cancelling entry for LDO/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:31:06,254 - NostalgiaForInfinityX7 - INFO - [2026-03-05 16:10:00+00:00] Cancelling entry for GALA/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:31:06,254 - NostalgiaForInfinityX7 - INFO - [2026-03-05 16:10:00+00:00] Cancelling entry for OP/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:31:06,255 - NostalgiaForInfinityX7 - INFO - [2026-03-05 16:10:00+00:00] Cancelling entry for LDO/USDT:USDT due to grind mode slots limit reached.
+2026-04-22 04:31:07,353 - NostalgiaForInfinityX7 - INFO - Grinding entry (gd1) [2026-03-08 13:25:00+00:00] [ETH/USDT:USDT] | Rate: 1932.02 | Stake amount: 101.03313132 | Profit (stake): 
+4.075234658047166 | Profit: 1.61% | Grind profit: 0.00% (0.0 USDT)
+2026-04-22 04:31:07,613 - NostalgiaForInfinityX7 - INFO - Grinding exit (gd1) [2026-03-09 03:05:00+00:00] [ETH/USDT:USDT] | Rate: 1970.01 | Stake amount: 102.44051999999999 | Coin amount: 0.156 | 
+Profit (stake): 11.947204115970466 | Profit: 2.16% | Grind profit: 1.97% (6.042973708553706 USDT)
+2026-04-22 04:31:09,849 - NostalgiaForInfinityX7 - INFO - Grinding entry (gd1) [2026-03-14 07:55:00+00:00] [ETH/USDT:USDT] | Rate: 2075.71 | Stake amount: 101.03313132 | Profit (stake): 
+17.943310676085094 | Profit: 3.24% | Grind profit: 0.00% (0.0 USDT)
+2026-04-22 04:31:10,328 - NostalgiaForInfinityX7 - INFO - Grinding exit (gd1) [2026-03-15 09:05:00+00:00] [ETH/USDT:USDT] | Rate: 2115.61 | Stake amount: 102.95968666666666 | Coin amount: 0.146 | 
+Profit (stake): 25.777114738282403 | Profit: 3.01% | Grind profit: 1.92% (5.937377810002373 USDT)
+/freqtrade/freqtrade/data/metrics.py:77: FutureWarning: The default fill_method='pad' in DataFrame.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.
+  rel_mean = df_comb.pct_change().mean(axis=1).fillna(0).cumsum()
+2026-04-22 04:31:29,951 - freqtrade.misc - INFO - dumping json to "/freqtrade/user_data/reviews/20260422_122757/backtests/current/backtest-result-2026-04-22_04-31-29.meta.json"

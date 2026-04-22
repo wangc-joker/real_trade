@@ -1,0 +1,52 @@
+{
+    "generated_at":  "2026-04-22 12:34:54 +08:00",
+    "timerange":  "20251022-20260422",
+    "upstream_repo":  "D:\\test\\NostalgiaForInfinity",
+    "review_root":  "D:\\test\\real_trade\\user_data\\reviews\\20260422_122757",
+    "current":  {
+                    "strategy_name":  "NostalgiaForInfinityX7",
+                    "final_balance":  1003.4314232400002,
+                    "profit_total_abs":  700.83142324,
+                    "profit_total_pct":  231.60324627891606,
+                    "cagr":  1036.8395644891209,
+                    "max_relative_drawdown":  0,
+                    "max_drawdown_abs":  0,
+                    "total_trades":  72,
+                    "winrate":  100,
+                    "backtest_start":  "2025-10-22 00:00:00",
+                    "backtest_end":  "2026-04-20 02:50:00",
+                    "timerange":  "20251022-20260422",
+                    "zip_path":  "D:\\test\\real_trade\\user_data\\reviews\\20260422_122757\\backtests\\current\\backtest-result-2026-04-22_04-31-29.zip"
+                },
+    "candidate":  {
+                      "strategy_name":  "NostalgiaForInfinityX7",
+                      "final_balance":  2610.58744797,
+                      "profit_total_abs":  2307.98744797,
+                      "profit_total_pct":  762.71891869464639,
+                      "cagr":  7801.9633991567389,
+                      "max_relative_drawdown":  0,
+                      "max_drawdown_abs":  0,
+                      "total_trades":  71,
+                      "winrate":  100,
+                      "backtest_start":  "2025-10-22 00:00:00",
+                      "backtest_end":  "2026-04-20 02:50:00",
+                      "timerange":  "20251022-20260422",
+                      "zip_path":  "D:\\test\\real_trade\\user_data\\reviews\\20260422_122757\\backtests\\candidate\\backtest-result-2026-04-22_04-34-51.zip"
+                  },
+    "risk_signals":  [
+                         {
+                             "label":  "Stoploss logic changed",
+                             "level":  "high"
+                         },
+                         {
+                             "label":  "Stake sizing logic changed",
+                             "level":  "medium"
+                         },
+                         {
+                             "label":  "Protection logic changed",
+                             "level":  "medium"
+                         }
+                     ],
+    "recommendation":  "review_manually",
+    "recommendation_zh":  "需要人工复核后再决定是否更新"
+}
